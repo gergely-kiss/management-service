@@ -2,7 +2,6 @@ package uk.kissgergely.managementservice.api.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,16 +22,16 @@ public class AccountController {
 	@GetMapping("/")
 	@ApiOperation(value = "Return all acounts", notes = "Return all saved accounts")
 	public List<AccountVO> getAccountList() {
-		return new ArrayList<AccountVO>(accounts.values());
+		return new ArrayList<AccountVO>();
 	}
 
 	@GetMapping("/{id}")
 	public AccountVO getAccount(@ApiParam(value = "Id for the account", required = true)@PathVariable Integer id) {
-		return accounts.get(id);
+		return new AccountVO();
 	}
 
 	@PostMapping("/")
 	public AccountVO addAccount(@RequestBody AccountVO account) {
-		return accounts.put(account.getAccountId(), account);
+		return account;
 	}
 }
