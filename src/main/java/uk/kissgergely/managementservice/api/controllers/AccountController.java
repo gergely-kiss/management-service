@@ -1,4 +1,4 @@
-package uk.kissgergely.managementservice.controllers;
+package uk.kissgergely.managementservice.api.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,27 +14,25 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import uk.kissgergely.managementservice.APIConstants;
-import uk.kissgergely.managementservice.daos.AccountDAO;
+import uk.kissgergely.managementservice.vos.AccountVO;
 
 @RestController
 @RequestMapping(APIConstants.API_ROOT + APIConstants.ACCOUNT_PATH)
 public class AccountController {
 
-	ConcurrentHashMap<Integer, AccountDAO> accounts = new ConcurrentHashMap<Integer, AccountDAO>();
-
 	@GetMapping("/")
 	@ApiOperation(value = "Return all acounts", notes = "Return all saved accounts")
-	public List<AccountDAO> getAccountList() {
-		return new ArrayList<AccountDAO>(accounts.values());
+	public List<AccountVO> getAccountList() {
+		return new ArrayList<AccountVO>(accounts.values());
 	}
 
 	@GetMapping("/{id}")
-	public AccountDAO getAccount(@ApiParam(value = "Id for the account", required = true)@PathVariable Integer id) {
+	public AccountVO getAccount(@ApiParam(value = "Id for the account", required = true)@PathVariable Integer id) {
 		return accounts.get(id);
 	}
 
 	@PostMapping("/")
-	public AccountDAO addAccount(@RequestBody AccountDAO account) {
+	public AccountVO addAccount(@RequestBody AccountVO account) {
 		return accounts.put(account.getAccountId(), account);
 	}
 }

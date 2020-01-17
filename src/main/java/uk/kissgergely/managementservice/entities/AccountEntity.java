@@ -21,15 +21,23 @@ public class AccountEntity {
 	@Column(name = "description", nullable = false)
 	private String description;
 	
+	@Column(name = "host_reference", nullable = false)
+	private String hostReference;
+	
+	@Column(name = "deleted")
+	private Boolean deleted;
+	
 	public AccountEntity() {
 
 	}
 
-	public AccountEntity(Integer id, String accountName, String description) {
+	public AccountEntity(Integer id, String accountName, String description, String hostReference) {
 		super();
 		this.id = id;
 		this.accountName = accountName;
 		this.description = description;
+		this.hostReference = hostReference;
+		this.deleted = false;
 	}
 
 	public Integer getId() {
@@ -55,6 +63,21 @@ public class AccountEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
+
+	public String getHostReference() {
+		return hostReference;
+	}
+
+	public void setHostReference(String hostReference) {
+		this.hostReference = hostReference;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+		
 }
