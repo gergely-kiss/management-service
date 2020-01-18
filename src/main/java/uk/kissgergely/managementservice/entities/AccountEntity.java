@@ -21,7 +21,7 @@ public class AccountEntity {
 	@Column(name = "description", nullable = false)
 	private String description;
 	
-	@Column(name = "host_reference", nullable = false)
+	@Column(name = "host_reference")
 	private String hostReference;
 	
 	@Column(name = "deleted")
@@ -38,6 +38,12 @@ public class AccountEntity {
 		this.description = description;
 		this.hostReference = hostReference;
 		this.deleted = false;
+	}
+
+	public AccountEntity(String accountName, String description, String id) {
+		this.accountName = accountName;
+		this.description = description;
+		this.hostReference = id;
 	}
 
 	public Integer getId() {

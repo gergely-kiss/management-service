@@ -1,13 +1,13 @@
 package uk.kissgergely.managementservice.exceptions;
 
-public class AccountException extends Exception {
+public class AccountServiceException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public AccountException(String exceptionMSG) {
+	public AccountServiceException(String exceptionMSG) {
 		super(exceptionMSG);
 	}
 	

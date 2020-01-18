@@ -1,20 +1,23 @@
 package uk.kissgergely.managementservice.api.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import uk.kissgergely.managementservice.entities.AccountEntity;
+import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+import uk.kissgergely.managementservice.api.exceptions.ControllerExceptionConstants;
+import uk.kissgergely.managementservice.dtos.AccountDTO;
+import uk.kissgergely.managementservice.exceptions.AccountServiceException;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 @Service
-public class AccountControllerServiceImpl implements AccountControllerService{
-	
+public class AccountControllerServiceImpl implements AccountControllerService {
+
 	AccountService accountService;
-	
-	
+
 	@Autowired
 	public AccountControllerServiceImpl(AccountService accountService) {
 		this.accountService = accountService;
@@ -22,44 +25,45 @@ public class AccountControllerServiceImpl implements AccountControllerService{
 
 	@Override
 	public List<AccountVO> getAllAccounts() {
-		
-		return null;
+		return accountService.getAllAccounts().stream().map(accountEntity -> {
+			return new AccountDTO(accountEntity).getAccountVO();
+		}).collect(Collectors.toList());
 	}
 
 	@Override
-	public AccountVO getAccountById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public AccountVO getAccountById(String id) throws AccountControllerException {		
+		try {
+			return new AccountDTO(accountService.getAccount(id)).getAccountVO();
+		} catch (AccountServiceException e) {
+			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+		}
 	}
 
 	@Override
-	public AccountVO createAccount(AccountVO account) {
-		// TODO Auto-generated method stub
-		return null;
+	public AccountVO createAccount(AccountVO account) throws AccountControllerException {
+		try {
+			return new AccountDTO(accountService.updateOrSaveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+		} catch (AccountServiceException e) {
+			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+		}
 	}
 
 	@Override
-	public AccountVO updateAccount(AccountVO account) {
-		// TODO Auto-generated method stub
-		return null;
+	public AccountVO updateAccount(AccountVO account) throws AccountControllerException {
+		try {
+			return new AccountDTO(accountService.updateOrSaveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+		} catch (AccountServiceException e) {
+			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+		}
 	}
 
 	@Override
-	public AccountVO deleteAccount(AccountVO account) {
-		// TODO Auto-generated method stub
-		return null;
+	public AccountVO deleteAccount(AccountVO account) throws AccountControllerException {
+		try {
+			return new AccountDTO(accountService.deleteAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+		} catch (AccountServiceException e) {
+			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+		}
 	}
-	
-	private AccountEntity converter(AccountVO account) {
-		AccountEntity accountEntity = new AccountEntity();
-		accountEntity.setAccountName(account.getAccountName());
-		accountEntity.setDescription(account.getAccountDescription());
-		accountEntity.setHostReference(account.getAccountId());
-		return accountEntity;
-		
-	}
-	private AccountVO converter (AccountEntity accountEntity) {
-		AccountVO account = new AccountVO();
-		return account;
-	}
+
 }

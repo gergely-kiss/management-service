@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.entities.AccountEntity;
-import uk.kissgergely.managementservice.exceptions.AccountException;
-import uk.kissgergely.managementservice.exceptions.ExceptionConstants;
+import uk.kissgergely.managementservice.exceptions.AccountServiceException;
+import uk.kissgergely.managementservice.exceptions.ServiceExceptionConstants;
 import uk.kissgergely.managementservice.repositories.AccountRepository;
 
 @Service
@@ -35,11 +35,11 @@ public class AccountServiceImpl implements AccountService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public AccountEntity getAccount(String id) throws AccountException {
+	public AccountEntity getAccount(String id) throws AccountServiceException {
 		if (accountRepo.findByHostReference(id).isPresent())
 			return accountRepo.findByHostReference(id).get();
 		else
-			throw new AccountException(ExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountServiceException(ServiceExceptionConstants.ACCOUNT_EXCEPTION);
 	}
 
 	/**
@@ -53,8 +53,12 @@ public class AccountServiceImpl implements AccountService {
 			accountEntity.setDescription(account.getDescription());
 			accountEntity.setHostReference(UUID.randomUUID().toString());
 			return accountRepo.save(account);
-		} catch (AccountException e) {
-			return accountRepo.save(accountEntity);
+		} catch (AccountServiceException e) {
+			AccountEntity account = new AccountEntity();
+			accountEntity.setAccountName(account.getAccountName());
+			accountEntity.setDescription(account.getDescription());
+			accountEntity.setHostReference(UUID.randomUUID().toString());
+			return accountRepo.save(account);
 		}
 	}
 
@@ -62,10 +66,10 @@ public class AccountServiceImpl implements AccountService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountException {
+	public AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountServiceException {
 		AccountEntity account = getAccount(accountEntity.getHostReference());
 		if (account.getDeleted())
-			throw new AccountException(ExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountServiceException(ServiceExceptionConstants.ACCOUNT_EXCEPTION);
 		account.setDeleted(true);
 		return accountRepo.save(account);
 	}

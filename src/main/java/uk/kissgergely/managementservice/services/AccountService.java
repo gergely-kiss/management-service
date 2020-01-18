@@ -2,7 +2,7 @@ package uk.kissgergely.managementservice.services;
 
 import java.util.List;
 import uk.kissgergely.managementservice.entities.AccountEntity;
-import uk.kissgergely.managementservice.exceptions.AccountException;
+import uk.kissgergely.managementservice.exceptions.AccountServiceException;
 
 public interface AccountService {
 
@@ -14,22 +14,22 @@ public interface AccountService {
 	/**
 	 * @param id
 	 * @return Account entity
-	 * @throws AccountException
+	 * @throws AccountServiceException
 	 */
-	AccountEntity getAccount(String id) throws AccountException;
+	AccountEntity getAccount(String id) throws AccountServiceException;
 
 	/**
 	 * @param accountEntity
 	 * @return Updated or saved account entity
-	 * @throws AccountException
+	 * @throws AccountServiceException
 	 */
-	AccountEntity updateOrSaveAccount(AccountEntity accountEntity) throws AccountException;
+	AccountEntity updateOrSaveAccount(AccountEntity accountEntity) throws AccountServiceException;
 
 	/**
 	 * @param accountEntity
 	 * @return deleted account
-	 * @throws AccountException
+	 * @throws AccountServiceException
 	 */
-	AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountException;
+	AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountServiceException;
 
 }
