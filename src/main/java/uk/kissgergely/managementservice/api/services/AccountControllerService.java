@@ -15,6 +15,6 @@ public interface AccountControllerService {
 
 	AccountVO updateAccount(AccountVO account) throws AccountControllerException;
 
-	AccountVO deleteAccount(AccountVO account) throws AccountControllerException;
+	AccountVO deleteAccount(String hostReference) throws AccountControllerException;
 
 }

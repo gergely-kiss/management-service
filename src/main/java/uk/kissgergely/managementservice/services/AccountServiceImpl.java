@@ -35,9 +35,9 @@ public class AccountServiceImpl implements AccountService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public AccountEntity getAccount(String id) throws AccountServiceException {
-		if (accountRepo.findByHostReference(id).isPresent())
-			return accountRepo.findByHostReference(id).get();
+	public AccountEntity getAccount(String hostReference) throws AccountServiceException {
+		if (accountRepo.findByHostReference(hostReference).isPresent())
+			return accountRepo.findByHostReference(hostReference).get();
 		else
 			throw new AccountServiceException(ServiceExceptionConstants.ACCOUNT_EXCEPTION);
 	}
@@ -66,8 +66,8 @@ public class AccountServiceImpl implements AccountService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountServiceException {
-		AccountEntity account = getAccount(accountEntity.getHostReference());
+	public AccountEntity deleteAccount(String hostReference) throws AccountServiceException {
+		AccountEntity account = getAccount(hostReference);
 		if (account.getDeleted())
 			throw new AccountServiceException(ServiceExceptionConstants.ACCOUNT_EXCEPTION);
 		account.setDeleted(true);

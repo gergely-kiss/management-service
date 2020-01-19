@@ -58,9 +58,9 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	}
 
 	@Override
-	public AccountVO deleteAccount(AccountVO account) throws AccountControllerException {
+	public AccountVO deleteAccount(String hostReference) throws AccountControllerException {
 		try {
-			return new AccountDTO(accountService.deleteAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+			return new AccountDTO(accountService.deleteAccount(hostReference)).getAccountVO();
 		} catch (AccountServiceException e) {
 			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
 		}

@@ -16,7 +16,7 @@ public interface AccountService {
 	 * @return Account entity
 	 * @throws AccountServiceException
 	 */
-	AccountEntity getAccount(String id) throws AccountServiceException;
+	AccountEntity getAccount(String hostReference) throws AccountServiceException;
 
 	/**
 	 * @param accountEntity
@@ -30,6 +30,6 @@ public interface AccountService {
 	 * @return deleted account
 	 * @throws AccountServiceException
 	 */
-	AccountEntity deleteAccount(AccountEntity accountEntity) throws AccountServiceException;
+	AccountEntity deleteAccount(String hostReference) throws AccountServiceException;
 
 }
