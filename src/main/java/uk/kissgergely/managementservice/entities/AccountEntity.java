@@ -1,10 +1,13 @@
 package uk.kissgergely.managementservice.entities;
 
+import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "account")
@@ -18,7 +21,7 @@ public class AccountEntity {
 	@Column(name = "account_name", nullable = false)
 	private String accountName;
 	
-	@Column(name = "description", nullable = false)
+	@Column(name = "description")
 	private String description;
 	
 	@Column(name = "host_reference")
@@ -26,9 +29,17 @@ public class AccountEntity {
 	
 	@Column(name = "deleted")
 	private Boolean deleted;
-	
+		
 	public AccountEntity() {
+		this.deleted = false;
+	
+	}
 
+	public AccountEntity(String accountName, String description) {
+		this.accountName = accountName;
+		this.description = description;
+		this.hostReference = UUID.randomUUID().toString();
+		this.deleted = false;
 	}
 
 	public AccountEntity(Integer id, String accountName, String description, String hostReference) {
@@ -44,6 +55,7 @@ public class AccountEntity {
 		this.accountName = accountName;
 		this.description = description;
 		this.hostReference = id;
+		this.deleted = false;
 	}
 
 	public Integer getId() {
@@ -85,5 +97,21 @@ public class AccountEntity {
 	public void setDeleted(Boolean deleted) {
 		this.deleted = deleted;
 	}
-		
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("AccountEntity [id=");
+		builder.append(id);
+		builder.append(", accountName=");
+		builder.append(accountName);
+		builder.append(", description=");
+		builder.append(description);
+		builder.append(", hostReference=");
+		builder.append(hostReference);
+		builder.append(", deleted=");
+		builder.append(deleted);
+		builder.append("]");
+		return builder.toString();
+	}	
 }

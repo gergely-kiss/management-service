@@ -23,8 +23,10 @@ public interface AccountService {
 	 * @return Updated or saved account entity
 	 * @throws AccountServiceException
 	 */
-	AccountEntity updateOrSaveAccount(AccountEntity accountEntity) throws AccountServiceException;
+	AccountEntity updateAccount(AccountEntity accountEntity) throws AccountServiceException;
 
+	AccountEntity saveAccount(AccountEntity accountEntity) throws AccountServiceException;
+	
 	/**
 	 * @param accountEntity
 	 * @return deleted account

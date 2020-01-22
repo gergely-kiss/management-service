@@ -7,7 +7,10 @@ import io.swagger.annotations.ApiModelProperty;
 public class AccountVO {
 	
 	private String accountId;
+	
+	@ApiModelProperty(required = true, notes = "unique id for the account")
 	private String accountName;
+	
 	private String accountDescription;
 	
 	public AccountVO() {
@@ -20,7 +23,12 @@ public class AccountVO {
 		this.accountDescription = accountDescription;
 	}
 
-	@ApiModelProperty(notes = "unique id for the account")
+	public AccountVO(String accountName, String accountDescription) {
+		super();
+		this.accountName = accountName;
+		this.accountDescription = accountDescription;
+	}
+
 	public String getAccountId() {
 		return accountId;
 	}
@@ -39,5 +47,18 @@ public class AccountVO {
 	public void setAccountDescription(String accountDescription) {
 		this.accountDescription = accountDescription;
 	}
-	
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("AccountVO [accountId=");
+		builder.append(accountId);
+		builder.append(", accountName=");
+		builder.append(accountName);
+		builder.append(", accountDescription=");
+		builder.append(accountDescription);
+		builder.append("]");
+		return builder.toString();
+	}
+		
 }

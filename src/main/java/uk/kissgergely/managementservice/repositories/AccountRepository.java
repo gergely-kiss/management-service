@@ -11,7 +11,8 @@ import uk.kissgergely.managementservice.entities.AccountEntity;
 @Repository
 public interface AccountRepository extends CrudRepository<AccountEntity, Integer> {
 
-	Optional<AccountEntity> findByHostReference(String id);
+	Optional<AccountEntity> findByHostReferenceAndDeletedFalse(String id);
 	List<AccountEntity> findByDeletedFalse();
+	Optional<AccountEntity> findByAccountName(String accountName);
 
 }

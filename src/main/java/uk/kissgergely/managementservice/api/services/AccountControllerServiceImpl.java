@@ -31,7 +31,7 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	}
 
 	@Override
-	public AccountVO getAccountById(String id) throws AccountControllerException {		
+	public AccountVO getAccountById(String id) throws AccountControllerException {
 		try {
 			return new AccountDTO(accountService.getAccount(id)).getAccountVO();
 		} catch (AccountServiceException e) {
@@ -42,7 +42,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	@Override
 	public AccountVO createAccount(AccountVO account) throws AccountControllerException {
 		try {
-			return new AccountDTO(accountService.updateOrSaveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+			return new AccountDTO(accountService.saveAccount(new AccountDTO(account).getAccountEntity()))
+					.getAccountVO();
 		} catch (AccountServiceException e) {
 			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
 		}
@@ -51,7 +52,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	@Override
 	public AccountVO updateAccount(AccountVO account) throws AccountControllerException {
 		try {
-			return new AccountDTO(accountService.updateOrSaveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
+			return new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
+					.getAccountVO();
 		} catch (AccountServiceException e) {
 			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
 		}
