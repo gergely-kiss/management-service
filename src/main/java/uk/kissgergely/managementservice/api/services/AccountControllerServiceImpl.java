@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
-import uk.kissgergely.managementservice.api.exceptions.ControllerExceptionConstants;
+import uk.kissgergely.managementservice.api.exceptions.ControllerResponseConstants;
 import uk.kissgergely.managementservice.dtos.AccountDTO;
 import uk.kissgergely.managementservice.exceptions.AccountServiceException;
 import uk.kissgergely.managementservice.services.AccountService;
@@ -35,7 +35,7 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 		try {
 			return new AccountDTO(accountService.getAccount(id)).getAccountVO();
 		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
 		}
 	}
 
@@ -45,7 +45,7 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 			return new AccountDTO(accountService.saveAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
 		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
 		}
 	}
 
@@ -55,16 +55,16 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 			return new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
 		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
 		}
 	}
 
 	@Override
-	public AccountVO deleteAccount(String hostReference) throws AccountControllerException {
+	public String deleteAccount(String hostReference) throws AccountControllerException {
 		try {
-			return new AccountDTO(accountService.deleteAccount(hostReference)).getAccountVO();
+			return accountService.deleteAccount(hostReference);
 		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerExceptionConstants.ACCOUNT_EXCEPTION);
+			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
 		}
 	}
 

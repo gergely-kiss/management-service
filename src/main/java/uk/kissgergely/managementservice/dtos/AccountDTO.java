@@ -3,7 +3,6 @@ package uk.kissgergely.managementservice.dtos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uk.kissgergely.managementservice.api.controllers.AccountController;
 import uk.kissgergely.managementservice.entities.AccountEntity;
 import uk.kissgergely.managementservice.vos.AccountVO;
 

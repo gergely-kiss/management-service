@@ -32,6 +32,6 @@ public interface AccountService {
 	 * @return deleted account
 	 * @throws AccountServiceException
 	 */
-	AccountEntity deleteAccount(String hostReference) throws AccountServiceException;
+	String deleteAccount(String hostReference) throws AccountServiceException;
 
 }
