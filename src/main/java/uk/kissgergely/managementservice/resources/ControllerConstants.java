@@ -1,6 +1,6 @@
-package uk.kissgergely.managementservice;
+package uk.kissgergely.managementservice.resources;
 
-public class APIConstants {
+public class ControllerConstants {
 
 	
 	public static final String API_ROOT="/api";

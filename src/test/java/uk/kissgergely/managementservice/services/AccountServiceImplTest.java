@@ -1,12 +1,10 @@
 package uk.kissgergely.managementservice.services;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
-import uk.kissgergely.managementservice.repositories.AccountRepository;
+import uk.kissgergely.managementservice.data.repositories.AccountRepository;
 
 class AccountServiceImplTest {
 	

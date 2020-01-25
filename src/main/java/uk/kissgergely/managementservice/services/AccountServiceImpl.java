@@ -8,12 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uk.kissgergely.managementservice.entities.AccountEntity;
-import uk.kissgergely.managementservice.exceptions.AccountAlreadyExistException;
-import uk.kissgergely.managementservice.exceptions.AccountNotFoundException;
-import uk.kissgergely.managementservice.exceptions.ServiceConstants;
-import uk.kissgergely.managementservice.exceptions.ServiceExceptionConstants;
-import uk.kissgergely.managementservice.repositories.AccountRepository;
+
+import uk.kissgergely.managementservice.data.entities.AccountEntity;
+import uk.kissgergely.managementservice.data.repositories.AccountRepository;
+import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
+import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
+import uk.kissgergely.managementservice.services.exceptions.ServiceExceptionConstants;
+import uk.kissgergely.managementservice.services.resources.ServiceConstants;
 
 @Service
 public class AccountServiceImpl implements AccountService {

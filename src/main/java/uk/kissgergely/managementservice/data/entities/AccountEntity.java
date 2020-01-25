@@ -1,4 +1,4 @@
-package uk.kissgergely.managementservice.entities;
+package uk.kissgergely.managementservice.data.entities;
 
 import java.util.UUID;
 

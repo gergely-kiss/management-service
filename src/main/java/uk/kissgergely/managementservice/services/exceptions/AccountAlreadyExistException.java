@@ -1,6 +1,6 @@
-package uk.kissgergely.managementservice.exceptions;
+package uk.kissgergely.managementservice.services.exceptions;
 
-public class AccountAlreadyExistException extends AccountServiceException{
+public class AccountAlreadyExistException extends ServiceException{
 
 	/**
 	 * 

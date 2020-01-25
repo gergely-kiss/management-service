@@ -8,12 +8,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
-import uk.kissgergely.managementservice.api.exceptions.ControllerResponseConstants;
 import uk.kissgergely.managementservice.dtos.AccountDTO;
-import uk.kissgergely.managementservice.exceptions.AccountAlreadyExistException;
-import uk.kissgergely.managementservice.exceptions.AccountNotFoundException;
-import uk.kissgergely.managementservice.exceptions.AccountServiceException;
+import uk.kissgergely.managementservice.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.services.AccountService;
+import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
+import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
+import uk.kissgergely.managementservice.services.exceptions.ServiceException;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 @Service
@@ -52,7 +52,7 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 		try {
 			return new AccountDTO(accountService.saveAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
-		} catch (AccountServiceException e) {
+		} catch (ServiceException e) {
 			throw new AccountControllerException(HttpStatus.CONFLICT,
 					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST);
 		}

@@ -3,7 +3,7 @@ package uk.kissgergely.managementservice.dtos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uk.kissgergely.managementservice.entities.AccountEntity;
+import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 public class AccountDTO {

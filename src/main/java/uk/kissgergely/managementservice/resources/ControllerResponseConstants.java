@@ -1,4 +1,4 @@
-package uk.kissgergely.managementservice.api.exceptions;
+package uk.kissgergely.managementservice.resources;
 
 public class ControllerResponseConstants {
 

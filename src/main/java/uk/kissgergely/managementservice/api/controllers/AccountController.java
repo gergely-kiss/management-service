@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import uk.kissgergely.managementservice.APIConstants;
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
-import uk.kissgergely.managementservice.api.exceptions.ControllerResponseConstants;
 import uk.kissgergely.managementservice.api.services.AccountControllerService;
+import uk.kissgergely.managementservice.resources.ControllerConstants;
+import uk.kissgergely.managementservice.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 @RestController
-@RequestMapping(APIConstants.API_ROOT + APIConstants.ACCOUNT_PATH)
+@RequestMapping(ControllerConstants.API_ROOT + ControllerConstants.ACCOUNT_PATH)
 public class AccountController {
 
 	private static final Logger LOG = LoggerFactory.getLogger(AccountController.class);

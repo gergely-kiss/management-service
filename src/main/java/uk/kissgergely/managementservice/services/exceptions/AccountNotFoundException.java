@@ -1,6 +1,6 @@
-package uk.kissgergely.managementservice.exceptions;
+package uk.kissgergely.managementservice.services.exceptions;
 
-public class AccountNotFoundException extends AccountServiceException {
+public class AccountNotFoundException extends ServiceException {
 
 	/**
 	 * 
