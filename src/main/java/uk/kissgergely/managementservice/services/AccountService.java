@@ -2,7 +2,8 @@ package uk.kissgergely.managementservice.services;
 
 import java.util.List;
 import uk.kissgergely.managementservice.entities.AccountEntity;
-import uk.kissgergely.managementservice.exceptions.AccountServiceException;
+import uk.kissgergely.managementservice.exceptions.AccountAlreadyExistException;
+import uk.kissgergely.managementservice.exceptions.AccountNotFoundException;
 
 public interface AccountService {
 
@@ -14,24 +15,25 @@ public interface AccountService {
 	/**
 	 * @param id
 	 * @return Account entity
-	 * @throws AccountServiceException
+	 * @throws AccountNotFoundException
 	 */
-	AccountEntity getAccount(String hostReference) throws AccountServiceException;
+	AccountEntity getAccount(String hostReference) throws AccountNotFoundException;
 
 	/**
 	 * @param accountEntity
 	 * @return Updated or saved account entity
-	 * @throws AccountServiceException
+	 * @throws AccountNotFoundException
+	 * @throws AccountAlreadyExistException
 	 */
-	AccountEntity updateAccount(AccountEntity accountEntity) throws AccountServiceException;
+	AccountEntity updateAccount(AccountEntity accountEntity) throws AccountNotFoundException, AccountAlreadyExistException;
 
-	AccountEntity saveAccount(AccountEntity accountEntity) throws AccountServiceException;
+	AccountEntity saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException;
 	
 	/**
 	 * @param accountEntity
 	 * @return deleted account
-	 * @throws AccountServiceException
+	 * @throws AccountNotFoundException
 	 */
-	String deleteAccount(String hostReference) throws AccountServiceException;
+	String deleteAccount(String hostReference) throws AccountNotFoundException;
 
 }

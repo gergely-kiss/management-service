@@ -7,7 +7,7 @@ import uk.kissgergely.managementservice.vos.AccountVO;
 
 public interface AccountControllerService {
 
-	List<AccountVO> getAllAccounts();
+	List<AccountVO> getAllAccounts() throws AccountControllerException;
 
 	AccountVO getAccountById(String id) throws AccountControllerException;
 

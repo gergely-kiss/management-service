@@ -1,17 +1,16 @@
 package uk.kissgergely.managementservice.api.exceptions;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.server.ResponseStatusException;
 
-@ResponseStatus(code = HttpStatus.CONFLICT, reason = "Actor Not Found")
-public class AccountControllerException extends Exception {
+public class AccountControllerException extends ResponseStatusException {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1936419339190175559L;
 
-	public AccountControllerException(String exceptionMSG) {
-		super(exceptionMSG);
+	public AccountControllerException(HttpStatus httpStatus, String exceptionMSG) {
+		super(httpStatus, exceptionMSG);
 	}
 }

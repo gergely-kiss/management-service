@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
 import uk.kissgergely.managementservice.api.exceptions.ControllerResponseConstants;
 import uk.kissgergely.managementservice.dtos.AccountDTO;
+import uk.kissgergely.managementservice.exceptions.AccountAlreadyExistException;
+import uk.kissgergely.managementservice.exceptions.AccountNotFoundException;
 import uk.kissgergely.managementservice.exceptions.AccountServiceException;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.vos.AccountVO;
@@ -24,18 +27,23 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	}
 
 	@Override
-	public List<AccountVO> getAllAccounts() {
-		return accountService.getAllAccounts().stream().map(accountEntity -> {
+	public List<AccountVO> getAllAccounts() throws AccountControllerException{
+		List<AccountVO> accountList = accountService.getAllAccounts().stream().map(accountEntity -> {
 			return new AccountDTO(accountEntity).getAccountVO();
 		}).collect(Collectors.toList());
+		if (accountList.isEmpty()) {
+			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND);
+		} else {
+			return accountList;
+		}
 	}
 
 	@Override
 	public AccountVO getAccountById(String id) throws AccountControllerException {
 		try {
 			return new AccountDTO(accountService.getAccount(id)).getAccountVO();
-		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
+		} catch (AccountNotFoundException e) {
+			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		}
 	}
 
@@ -45,7 +53,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 			return new AccountDTO(accountService.saveAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
 		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
+			throw new AccountControllerException(HttpStatus.CONFLICT,
+					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST);
 		}
 	}
 
@@ -54,8 +63,11 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 		try {
 			return new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
-		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
+		} catch (AccountNotFoundException e) {
+			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+		} catch (AccountAlreadyExistException e) {
+			throw new AccountControllerException(HttpStatus.CONFLICT,
+					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
 		}
 	}
 
@@ -63,8 +75,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	public String deleteAccount(String hostReference) throws AccountControllerException {
 		try {
 			return accountService.deleteAccount(hostReference);
-		} catch (AccountServiceException e) {
-			throw new AccountControllerException(ControllerResponseConstants.ACCOUNT_EXCEPTION);
+		} catch (AccountNotFoundException e) {
+			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		}
 	}
 
