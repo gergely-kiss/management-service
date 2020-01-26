@@ -31,7 +31,6 @@ public class AccountEntity {
 		
 	public AccountEntity() {
 		this.deleted = false;
-	
 	}
 
 	public AccountEntity(String accountName, String description) {
@@ -41,19 +40,19 @@ public class AccountEntity {
 		this.deleted = false;
 	}
 
-	public AccountEntity(Integer id, String accountName, String description, String hostReference) {
-		super();
-		this.id = id;
+	public AccountEntity(String accountName, String description, String hostReference) {
 		this.accountName = accountName;
 		this.description = description;
 		this.hostReference = hostReference;
 		this.deleted = false;
 	}
 
-	public AccountEntity(String accountName, String description, String id) {
+	public AccountEntity(Integer id, String accountName, String description, String hostReference) {
+		super();
+		this.id = id;
 		this.accountName = accountName;
 		this.description = description;
-		this.hostReference = id;
+		this.hostReference = hostReference;
 		this.deleted = false;
 	}
 

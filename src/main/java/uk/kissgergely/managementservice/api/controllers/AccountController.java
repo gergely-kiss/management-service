@@ -62,7 +62,7 @@ public class AccountController {
 		LOG.info("addAccount: called with {}", account);
 		AccountVO accountVO = accountControllerService.createAccount(account);
 		LOG.info("addAccount: account added {} ", account);
-		return new ResponseEntity<AccountVO>(accountVO, HttpStatus.CREATED);
+		return new ResponseEntity<>(accountVO, HttpStatus.CREATED);
 	}
 
 	@PutMapping("/")
@@ -75,7 +75,7 @@ public class AccountController {
 	public ResponseEntity<AccountVO> updateAccount(@RequestBody AccountVO account) throws AccountControllerException {
 		AccountVO accountVO = accountControllerService.updateAccount(account);
 		LOG.info("updateAccount: account updated {} ", account);
-		return new ResponseEntity<AccountVO>(accountVO, HttpStatus.valueOf(204));
+		return new ResponseEntity<>(accountVO, HttpStatus.valueOf(204));
 	}
 
 	@DeleteMapping("/{id}")

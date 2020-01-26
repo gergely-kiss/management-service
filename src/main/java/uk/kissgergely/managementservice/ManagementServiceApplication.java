@@ -24,7 +24,7 @@ public class ManagementServiceApplication {
 	}
 
 	@Bean
-	public Docket APIRoot() {
+	public Docket apiRoot() {
 		return new Docket(DocumentationType.SWAGGER_2).select().paths(paths()).apis(RequestHandlerSelectors.any())
 				.build().apiInfo(getApiInfo()).useDefaultResponseMessages(false);
 	}

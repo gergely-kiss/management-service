@@ -22,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
 	private AccountRepository accountRepo;
 
 	private static final Logger LOG = LoggerFactory.getLogger(AccountServiceImpl.class);
-
+	
 	@Autowired
 	public AccountServiceImpl(AccountRepository accountRepo) {
 		this.accountRepo = accountRepo;
