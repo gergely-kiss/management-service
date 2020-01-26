@@ -2,18 +2,19 @@ package uk.kissgergely.managementservice.api.services;
 
 import java.util.List;
 
+import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 public interface AccountControllerService {
 
-	List<AccountVO> getAllAccounts();
+	List<AccountVO> getAllAccounts() throws AccountControllerException;
 
-	AccountVO getAccountById(String id);
+	AccountVO getAccountById(String id) throws AccountControllerException;
 
-	AccountVO createAccount(AccountVO account);
+	AccountVO createAccount(AccountVO account) throws AccountControllerException;
 
-	AccountVO updateAccount(AccountVO account);
+	AccountVO updateAccount(AccountVO account) throws AccountControllerException;
 
-	AccountVO deleteAccount(AccountVO account);
+	String deleteAccount(String hostReference) throws AccountControllerException;
 
 }

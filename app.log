@@ -1,0 +1,272 @@
+2020-01-25 09:03:26,126 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:03:26,133 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:03:26,134 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:03:27,912 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:03:27,912 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:03:28,004 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:03:28,041 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-01-25 09:03:28,267 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-01-25 09:03:28,413 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:03:28,498 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.4.9.Final}
+2020-01-25 09:03:28,644 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-01-25 09:03:28,763 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:03:29,425 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:03:30,010 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:03:30,368 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:03:30,391 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:03:30,427 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:03:30,589 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.793 seconds (JVM running for 5.207)
+2020-01-25 09:03:40,154 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 09:04:09,005 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown initiated...
+2020-01-25 09:04:09,014 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown completed.
+2020-01-25 09:04:09,402 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:04:09,402 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:04:09,402 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:04:09,746 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:04:09,794 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:04:09,794 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:04:09,806 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:04:09,818 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2020-01-25 09:04:09,823 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2020-01-25 09:04:09,844 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:04:09,847 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:04:09,888 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:04:10,010 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:04:10,075 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:04:10,075 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:04:10,081 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:04:10,104 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.728 seconds (JVM running for 44.722)
+2020-01-25 09:04:28,589 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-2 - Shutdown initiated...
+2020-01-25 09:04:28,609 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-2 - Shutdown completed.
+2020-01-25 09:04:28,985 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:04:28,986 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:04:28,986 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:04:29,285 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:04:29,334 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:04:29,335 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:04:29,347 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:04:29,358 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2020-01-25 09:04:29,363 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2020-01-25 09:04:29,381 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:04:29,385 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:04:29,420 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:04:29,513 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:04:29,569 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:04:29,569 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:04:29,573 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:04:29,593 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.628 seconds (JVM running for 64.212)
+2020-01-25 09:05:59,505 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown initiated...
+2020-01-25 09:05:59,516 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown completed.
+2020-01-25 09:05:59,905 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:05:59,906 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:05:59,906 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:06:00,207 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:06:00,252 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:06:00,253 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:06:00,265 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:06:00,274 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2020-01-25 09:06:00,278 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2020-01-25 09:06:00,296 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:06:00,299 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:06:00,334 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:06:00,431 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:06:00,487 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:06:00,488 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:06:00,493 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:06:00,511 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.627 seconds (JVM running for 155.129)
+2020-01-25 09:06:26,042 INFO com.zaxxer.hikari.HikariDataSource [Thread-20] HikariPool-4 - Shutdown initiated...
+2020-01-25 09:06:26,054 INFO com.zaxxer.hikari.HikariDataSource [Thread-20] HikariPool-4 - Shutdown completed.
+2020-01-25 09:06:26,419 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:06:26,419 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:06:26,419 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:06:26,689 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:06:26,734 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:06:26,734 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:06:26,746 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:06:26,755 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2020-01-25 09:06:26,759 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2020-01-25 09:06:26,776 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:06:26,779 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:06:26,809 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:06:26,902 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:06:26,957 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:06:26,957 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:06:26,961 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:06:26,979 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.581 seconds (JVM running for 181.597)
+2020-01-25 09:06:41,446 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-5 - Shutdown initiated...
+2020-01-25 09:06:41,459 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-5 - Shutdown completed.
+2020-01-25 09:06:41,809 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:06:41,810 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:06:41,810 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:06:42,066 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:06:42,111 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:06:42,112 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:06:42,123 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:06:42,131 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Starting...
+2020-01-25 09:06:42,135 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Start completed.
+2020-01-25 09:06:42,152 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:06:42,155 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:06:42,184 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:06:42,270 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:06:42,326 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:06:42,326 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:06:42,330 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:06:42,348 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.559 seconds (JVM running for 196.967)
+2020-01-25 09:07:00,838 INFO com.zaxxer.hikari.HikariDataSource [Thread-30] HikariPool-6 - Shutdown initiated...
+2020-01-25 09:07:00,852 INFO com.zaxxer.hikari.HikariDataSource [Thread-30] HikariPool-6 - Shutdown completed.
+2020-01-25 09:07:01,212 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:07:01,212 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:07:01,212 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:07:01,466 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:07:01,510 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:07:01,510 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:07:01,520 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:07:01,528 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Starting...
+2020-01-25 09:07:01,533 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Start completed.
+2020-01-25 09:07:01,549 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:07:01,552 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:07:01,580 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:07:01,660 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:07:01,709 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:07:01,710 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:07:01,713 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:07:01,727 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.534 seconds (JVM running for 216.345)
+2020-01-25 09:07:19,215 INFO com.zaxxer.hikari.HikariDataSource [Thread-35] HikariPool-7 - Shutdown initiated...
+2020-01-25 09:07:19,228 INFO com.zaxxer.hikari.HikariDataSource [Thread-35] HikariPool-7 - Shutdown completed.
+2020-01-25 09:07:19,553 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:07:19,553 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:07:19,553 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:07:19,793 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:07:19,838 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:07:19,838 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:07:19,848 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:07:19,855 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Starting...
+2020-01-25 09:07:19,859 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Start completed.
+2020-01-25 09:07:19,874 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:07:19,877 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:07:19,902 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:07:19,998 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:07:20,045 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:07:20,045 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:07:20,049 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:07:20,065 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.531 seconds (JVM running for 234.683)
+2020-01-25 09:07:27,492 INFO com.zaxxer.hikari.HikariDataSource [Thread-40] HikariPool-8 - Shutdown initiated...
+2020-01-25 09:07:27,510 INFO com.zaxxer.hikari.HikariDataSource [Thread-40] HikariPool-8 - Shutdown completed.
+2020-01-25 09:07:27,887 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:07:27,887 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:07:27,887 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:07:28,119 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:07:28,162 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:07:28,163 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:07:28,174 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:07:28,180 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Starting...
+2020-01-25 09:07:28,184 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Start completed.
+2020-01-25 09:07:28,201 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:07:28,204 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:07:28,230 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:07:28,312 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:07:28,362 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:07:28,362 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:07:28,365 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:07:28,379 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.511 seconds (JVM running for 242.997)
+2020-01-25 09:07:56,007 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 09:08:30,129 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-9 - Shutdown initiated...
+2020-01-25 09:08:30,149 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-9 - Shutdown completed.
+2020-01-25 09:08:30,506 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:08:30,507 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:08:30,507 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:08:30,750 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:08:30,794 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:08:30,794 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:08:30,805 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:08:30,812 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Starting...
+2020-01-25 09:08:30,816 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Start completed.
+2020-01-25 09:08:30,831 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:08:30,835 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:08:30,858 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:08:30,927 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:08:30,973 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:08:30,973 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:08:30,976 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:08:30,989 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.5 seconds (JVM running for 305.607)
+2020-01-25 09:08:32,384 INFO com.zaxxer.hikari.HikariDataSource [Thread-50] HikariPool-10 - Shutdown initiated...
+2020-01-25 09:08:32,397 INFO com.zaxxer.hikari.HikariDataSource [Thread-50] HikariPool-10 - Shutdown completed.
+2020-01-25 09:08:32,725 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:08:32,726 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:08:32,726 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:08:32,963 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:08:33,006 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:08:33,006 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:08:33,017 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:08:33,023 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Starting...
+2020-01-25 09:08:33,027 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Start completed.
+2020-01-25 09:08:33,042 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:08:33,045 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:08:33,067 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:08:33,134 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:08:33,177 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:08:33,177 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:08:33,180 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:08:33,194 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.485 seconds (JVM running for 307.812)
+2020-01-25 09:08:34,673 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 09:09:00,742 INFO com.zaxxer.hikari.HikariDataSource [Thread-55] HikariPool-11 - Shutdown initiated...
+2020-01-25 09:09:00,754 INFO com.zaxxer.hikari.HikariDataSource [Thread-55] HikariPool-11 - Shutdown completed.
+2020-01-25 09:09:01,083 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:09:01,083 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:09:01,083 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:09:01,314 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:09:01,358 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:09:01,359 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:09:01,369 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:09:01,375 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Starting...
+2020-01-25 09:09:01,378 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Start completed.
+2020-01-25 09:09:01,398 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:09:01,402 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:09:01,426 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:09:01,500 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:09:01,544 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:09:01,545 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:09:01,548 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:09:01,560 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.495 seconds (JVM running for 336.179)
+2020-01-25 09:09:04,439 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 09:09:14,877 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-10] getAllAccounts: called.
+2020-01-25 09:09:14,998 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-10] getAllAccounts: accountEntityList [AccountEntity [id=93, accountName=H1, description=testFromPostman, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false], AccountEntity [id=125, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false], AccountEntity [id=126, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false], AccountEntity [id=127, accountName=H12-775123, description=HSBC savi5ng again again, hostReference=13cd859b-42ce-4920-9a4c-793fbeb5d6db, deleted=false], AccountEntity [id=128, accountName=H12-7751asd23, description=HSBC savi5ng again again, hostReference=fcfd7e9b-46e8-44b8-8eec-85682d7034f8, deleted=false]]
+2020-01-25 09:09:15,000 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-10] getAccountList: accountVOList [AccountVO [accountId=87574add-47c1-4c55-b83c-2062996b49e2, accountName=H1, accountDescription=testFromPostman], AccountVO [accountId=7c83358b-1c89-4db2-94c5-d7700871972a, accountName=H12, accountDescription=HSBC savi5ng again again], AccountVO [accountId=a92ec023-5736-489b-bf16-fb2a8e1f3873, accountName=H12-77, accountDescription=HSBC savi5ng again again], AccountVO [accountId=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, accountName=H12-775, accountDescription=HSBC savi5ng again again], AccountVO [accountId=13cd859b-42ce-4920-9a4c-793fbeb5d6db, accountName=H12-775123, accountDescription=HSBC savi5ng again again], AccountVO [accountId=fcfd7e9b-46e8-44b8-8eec-85682d7034f8, accountName=H12-7751asd23, accountDescription=HSBC savi5ng again again]]
+2020-01-25 09:09:48,225 INFO com.zaxxer.hikari.HikariDataSource [Thread-60] HikariPool-12 - Shutdown initiated...
+2020-01-25 09:09:48,242 INFO com.zaxxer.hikari.HikariDataSource [Thread-60] HikariPool-12 - Shutdown completed.
+2020-01-25 09:09:48,626 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:09:48,627 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:09:48,627 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:09:48,867 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:09:48,910 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:09:48,910 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:09:48,921 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:09:48,927 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Starting...
+2020-01-25 09:09:48,932 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Start completed.
+2020-01-25 09:09:48,947 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:09:48,950 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:09:48,976 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:09:49,058 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:09:49,105 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:09:49,105 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:09:49,108 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:09:49,120 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.516 seconds (JVM running for 383.738)
+2020-01-25 09:11:00,933 INFO com.zaxxer.hikari.HikariDataSource [Thread-65] HikariPool-13 - Shutdown initiated...
+2020-01-25 09:11:00,949 INFO com.zaxxer.hikari.HikariDataSource [Thread-65] HikariPool-13 - Shutdown completed.
+2020-01-25 09:11:01,280 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 330612 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-25 09:11:01,280 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-25 09:11:01,280 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-25 09:11:01,536 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-25 09:11:01,582 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-25 09:11:01,582 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-25 09:11:01,593 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-25 09:11:01,599 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Starting...
+2020-01-25 09:11:01,602 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Start completed.
+2020-01-25 09:11:01,618 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-25 09:11:01,621 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-25 09:11:01,643 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-25 09:11:01,713 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-25 09:11:01,761 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-25 09:11:01,762 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-25 09:11:01,765 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-25 09:11:01,781 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.52 seconds (JVM running for 456.4)

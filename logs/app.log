@@ -1,0 +1,518 @@
+2020-01-23 19:00:31,728 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 261036 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:00:31,728 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 261036 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:00:31,730 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:00:31,730 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:00:31,730 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:00:31,730 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:00:36,054 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.615 seconds (JVM running for 5.13)
+2020-01-23 19:00:36,054 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.615 seconds (JVM running for 5.13)
+2020-01-23 19:00:47,999 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259728 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:00:47,999 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259728 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:00:48,003 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:00:48,003 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:00:48,003 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:00:48,003 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:00:53,135 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 5.578 seconds (JVM running for 6.768)
+2020-01-23 19:00:53,135 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 5.578 seconds (JVM running for 6.768)
+2020-01-23 19:01:12,986 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 260484 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:01:12,986 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 260484 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:01:12,988 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:01:12,988 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:01:12,988 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:01:12,988 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:01:16,947 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.24 seconds (JVM running for 4.72)
+2020-01-23 19:01:16,947 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.24 seconds (JVM running for 4.72)
+2020-01-23 19:01:26,277 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:01:26,277 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:01:26,279 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:01:26,279 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:01:26,279 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:01:26,279 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:01:30,137 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.136 seconds (JVM running for 4.616)
+2020-01-23 19:01:30,137 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 4.136 seconds (JVM running for 4.616)
+2020-01-23 19:02:16,967 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-9] getAllAccounts: called.
+2020-01-23 19:02:16,967 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-9] getAllAccounts: called.
+2020-01-23 19:02:17,087 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-9] getAllAccounts: accountEntityList [AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false], AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false], AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]]
+2020-01-23 19:02:17,087 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-9] getAllAccounts: accountEntityList [AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false], AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false], AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]]
+2020-01-23 19:02:39,763 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,763 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,764 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: called with hostReference d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,764 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: called with hostReference d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,764 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: called with hostReference d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,764 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: called with hostReference d40830b3-fbc4-414b-b32b-5271c55cd1d0
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: accountEntity found AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: accountEntity found AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: accountToDelete AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: accountToDelete AccountEntity [id=95, accountName=H123, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=false]
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: deleted accountToDelete AccountEntity [id=95, accountName=__________H123__________7e4f2ebb-6cd4-40fd-af63-4406425f5c09, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=true]
+2020-01-23 19:02:39,775 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: deleted accountToDelete AccountEntity [id=95, accountName=__________H123__________7e4f2ebb-6cd4-40fd-af63-4406425f5c09, description=HSBC savi5ng again again, hostReference=d40830b3-fbc4-414b-b32b-5271c55cd1d0, deleted=true]
+2020-01-23 19:04:10,901 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:04:10,901 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:04:10,901 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:04:10,901 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:04:10,901 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:04:10,901 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:04:11,593 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.723 seconds (JVM running for 166.071)
+2020-01-23 19:04:11,593 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.723 seconds (JVM running for 166.071)
+2020-01-23 19:04:16,415 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: called.
+2020-01-23 19:04:16,415 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: called.
+2020-01-23 19:04:16,421 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: accountEntityList [AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false], AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false]]
+2020-01-23 19:04:16,421 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: accountEntityList [AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false], AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false]]
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: called with hostReference 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: called with hostReference 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: called with hostReference 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,170 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: called with hostReference 64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: accountEntity found AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false]
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] getAccount: accountEntity found AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false]
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: accountToDelete AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false]
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: accountToDelete AccountEntity [id=92, accountName=HSBC_account12345, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=false]
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: deleted accountToDelete AccountEntity [id=92, accountName=__________HSBC_account12345__________1f4af600-e4b6-4e1d-9ab0-7b2fee871ab1, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=true]
+2020-01-23 19:04:25,174 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] deleteAccount: deleted accountToDelete AccountEntity [id=92, accountName=__________HSBC_account12345__________1f4af600-e4b6-4e1d-9ab0-7b2fee871ab1, description=HSBC savi5ng again again, hostReference=64b7f1e5-fc0f-4a49-b6d8-e4c548f55b50, deleted=true]
+2020-01-23 19:05:16,952 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:05:16,952 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:05:16,952 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:05:16,952 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:05:16,952 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:05:16,952 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:05:17,529 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.603 seconds (JVM running for 232.007)
+2020-01-23 19:05:17,529 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.603 seconds (JVM running for 232.007)
+2020-01-23 19:06:22,905 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:06:22,905 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:06:22,905 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:06:22,905 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:06:22,905 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:06:22,905 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:06:23,554 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.673 seconds (JVM running for 298.033)
+2020-01-23 19:06:23,554 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.673 seconds (JVM running for 298.033)
+2020-01-23 19:06:31,563 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:06:31,563 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:06:31,563 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:06:31,563 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:06:31,563 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:06:31,563 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:06:32,104 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.565 seconds (JVM running for 306.583)
+2020-01-23 19:06:32,104 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.565 seconds (JVM running for 306.583)
+2020-01-23 19:07:05,228 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:05,228 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:05,228 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:05,228 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:05,228 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:05,228 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:05,753 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.547 seconds (JVM running for 340.232)
+2020-01-23 19:07:05,753 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.547 seconds (JVM running for 340.232)
+2020-01-23 19:07:21,808 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:21,808 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:21,808 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:21,808 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:21,808 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:21,808 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:22,313 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.529 seconds (JVM running for 356.791)
+2020-01-23 19:07:22,313 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.529 seconds (JVM running for 356.791)
+2020-01-23 19:07:34,342 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:34,342 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:34,342 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:34,342 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:34,342 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:34,342 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:34,833 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.512 seconds (JVM running for 369.311)
+2020-01-23 19:07:34,833 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.512 seconds (JVM running for 369.311)
+2020-01-23 19:07:52,917 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:52,917 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:52,917 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:52,917 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:52,917 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:52,917 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:53,398 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.501 seconds (JVM running for 387.876)
+2020-01-23 19:07:53,398 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.501 seconds (JVM running for 387.876)
+2020-01-23 19:07:58,376 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:58,376 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:07:58,377 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:58,377 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:07:58,377 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:58,377 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:07:58,858 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.502 seconds (JVM running for 393.336)
+2020-01-23 19:07:58,858 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.502 seconds (JVM running for 393.336)
+2020-01-23 19:08:45,068 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:08:45,068 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:08:45,068 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:08:45,068 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:08:45,068 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:08:45,068 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:08:45,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.489 seconds (JVM running for 440.016)
+2020-01-23 19:08:45,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.489 seconds (JVM running for 440.016)
+2020-01-23 19:08:54,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:08:54,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:08:54,537 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:08:54,537 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:08:54,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:08:54,537 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:08:55,000 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.483 seconds (JVM running for 449.479)
+2020-01-23 19:08:55,000 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.483 seconds (JVM running for 449.479)
+2020-01-23 19:09:17,084 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:09:17,084 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:09:17,085 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:09:17,085 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:09:17,085 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:09:17,085 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:09:17,536 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.472 seconds (JVM running for 472.015)
+2020-01-23 19:09:17,536 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.472 seconds (JVM running for 472.015)
+2020-01-23 19:09:31,552 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:09:31,552 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:09:31,552 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:09:31,552 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:09:31,552 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:09:31,552 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:09:32,008 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.477 seconds (JVM running for 486.486)
+2020-01-23 19:09:32,008 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.477 seconds (JVM running for 486.486)
+2020-01-23 19:10:53,261 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: called.
+2020-01-23 19:10:53,261 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: called.
+2020-01-23 19:10:53,266 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: accountEntityList [AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false]]
+2020-01-23 19:10:53,266 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] getAllAccounts: accountEntityList [AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false]]
+2020-01-23 19:11:19,712 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] addAccount called with: AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:19,712 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-2] addAccount called with: AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:19,713 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-2] transfer accountVO AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false] 
+2020-01-23 19:11:19,713 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-2] transfer accountVO AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false] 
+2020-01-23 19:11:19,713 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]
+2020-01-23 19:11:19,713 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]
+2020-01-23 19:11:19,725 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] saveAccount: account saved AccountEntity [id=125, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]
+2020-01-23 19:11:19,725 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-2] saveAccount: account saved AccountEntity [id=125, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]
+2020-01-23 19:11:27,379 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-3] getAllAccounts: called.
+2020-01-23 19:11:27,379 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-3] getAllAccounts: called.
+2020-01-23 19:11:27,380 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-3] getAllAccounts: accountEntityList [AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false], AccountEntity [id=125, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]]
+2020-01-23 19:11:27,380 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-3] getAllAccounts: accountEntityList [AccountEntity [id=93, accountName=H1, description=HSBC savi5ng again again, hostReference=87574add-47c1-4c55-b83c-2062996b49e2, deleted=false], AccountEntity [id=94, accountName=H12, description=HSBC savi5ng again again, hostReference=7c83358b-1c89-4db2-94c5-d7700871972a, deleted=false], AccountEntity [id=125, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a92ec023-5736-489b-bf16-fb2a8e1f3873, deleted=false]]
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-4] addAccount called with: AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-4] addAccount called with: AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-4] transfer accountVO AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false] 
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-4] transfer accountVO AccountVO [accountId=null, accountName=H12-77, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false] 
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-4] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false]
+2020-01-23 19:11:30,647 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-4] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false]
+2020-01-23 19:11:30,648 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-4] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false] is already exist with the same name.
+2020-01-23 19:11:30,648 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-4] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-77, description=HSBC savi5ng again again, hostReference=a5d80439-6ad2-4615-8f23-23111917a9dd, deleted=false] is already exist with the same name.
+2020-01-23 19:11:30,654 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found] with root cause
+uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found
+	at uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl.createAccount(AccountControllerServiceImpl.java:48)
+	at uk.kissgergely.managementservice.api.controllers.AccountController.addAccount(AccountController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2020-01-23 19:11:54,127 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-5] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:54,127 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-5] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:11:54,127 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-5] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false] 
+2020-01-23 19:11:54,127 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-5] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false] 
+2020-01-23 19:11:54,128 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-5] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false]
+2020-01-23 19:11:54,128 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-5] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false]
+2020-01-23 19:11:54,129 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-5] saveAccount: account saved AccountEntity [id=126, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false]
+2020-01-23 19:11:54,129 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-5] saveAccount: account saved AccountEntity [id=126, accountName=H12-775, description=HSBC savi5ng again again, hostReference=71fc4b9c-d3f2-418a-8562-8cb612d1a9f0, deleted=false]
+2020-01-23 19:13:07,255 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:07,255 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:07,255 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:07,255 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:07,255 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:07,255 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:07,488 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-23 19:13:07,532 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:07,532 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-23 19:13:07,532 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-23 19:13:07,543 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-23 19:13:07,549 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-15 - Starting...
+2020-01-23 19:13:07,553 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-15 - Start completed.
+2020-01-23 19:13:07,568 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-23 19:13:07,571 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-23 19:13:07,592 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-23 19:13:07,657 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-23 19:13:07,699 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-23 19:13:07,699 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-23 19:13:07,702 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-23 19:13:07,711 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:07,713 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.48 seconds (JVM running for 702.192)
+2020-01-23 19:13:07,713 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.48 seconds (JVM running for 702.192)
+2020-01-23 19:13:18,554 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-23 19:13:18,557 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:18,557 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:18,558 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false] 
+2020-01-23 19:13:18,558 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false] 
+2020-01-23 19:13:18,559 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false]
+2020-01-23 19:13:18,559 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false]
+2020-01-23 19:13:18,562 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false] is already exist with the same name.
+2020-01-23 19:13:18,562 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=754a683f-a484-4595-97af-0150b86cceb4, deleted=false] is already exist with the same name.
+2020-01-23 19:13:18,562 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found] with root cause
+uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found
+	at uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl.createAccount(AccountControllerServiceImpl.java:48)
+	at uk.kissgergely.managementservice.api.controllers.AccountController.addAccount(AccountController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2020-01-23 19:13:30,236 INFO com.zaxxer.hikari.HikariDataSource [Thread-75] HikariPool-15 - Shutdown initiated...
+2020-01-23 19:13:30,443 INFO com.zaxxer.hikari.HikariDataSource [Thread-75] HikariPool-15 - Shutdown completed.
+2020-01-23 19:13:30,828 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:30,828 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:30,828 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:30,828 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:30,828 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:30,828 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:31,068 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-23 19:13:31,111 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:31,111 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-23 19:13:31,111 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-23 19:13:31,123 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-23 19:13:31,131 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-16 - Starting...
+2020-01-23 19:13:31,135 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-16 - Start completed.
+2020-01-23 19:13:31,151 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-23 19:13:31,154 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-23 19:13:31,177 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-23 19:13:31,262 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-23 19:13:31,320 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-23 19:13:31,320 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-23 19:13:31,323 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-23 19:13:31,336 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:31,338 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.533 seconds (JVM running for 725.817)
+2020-01-23 19:13:31,338 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.533 seconds (JVM running for 725.817)
+2020-01-23 19:13:38,650 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-23 19:13:38,653 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:38,653 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:38,654 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false] 
+2020-01-23 19:13:38,654 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false] 
+2020-01-23 19:13:38,655 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false]
+2020-01-23 19:13:38,655 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false]
+2020-01-23 19:13:38,658 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false] is already exist with the same name.
+2020-01-23 19:13:38,658 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=ff6f1a94-630d-4753-9c76-cd92a2e11264, deleted=false] is already exist with the same name.
+2020-01-23 19:13:38,659 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found] with root cause
+uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found
+	at uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl.createAccount(AccountControllerServiceImpl.java:48)
+	at uk.kissgergely.managementservice.api.controllers.AccountController.addAccount(AccountController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2020-01-23 19:13:51,843 INFO com.zaxxer.hikari.HikariDataSource [Thread-80] HikariPool-16 - Shutdown initiated...
+2020-01-23 19:13:52,050 INFO com.zaxxer.hikari.HikariDataSource [Thread-80] HikariPool-16 - Shutdown completed.
+2020-01-23 19:13:52,489 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:52,489 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Starting ManagementServiceApplication on Cyber-Station with PID 259592 (C:\Users\kiss-\Documents\management-service\target\classes started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-01-23 19:13:52,490 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:52,490 DEBUG uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-23 19:13:52,490 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:52,490 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-01-23 19:13:52,724 WARN org.apache.tomcat.util.modeler.Registry [restartedMain] The MBean registry cannot be disabled because it has already been initialised
+2020-01-23 19:13:52,768 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:52,768 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2020-01-23 19:13:52,768 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-23 19:13:52,778 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-01-23 19:13:52,784 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-17 - Starting...
+2020-01-23 19:13:52,787 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-17 - Start completed.
+2020-01-23 19:13:52,802 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-01-23 19:13:52,804 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-23 19:13:52,825 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-01-23 19:13:52,894 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-23 19:13:52,942 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-01-23 19:13:52,943 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-01-23 19:13:52,946 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-01-23 19:13:52,956 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-01-23 19:13:52,959 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.49 seconds (JVM running for 747.437)
+2020-01-23 19:13:52,959 INFO uk.kissgergely.managementservice.ManagementServiceApplication [restartedMain] Started ManagementServiceApplication in 0.49 seconds (JVM running for 747.437)
+2020-01-23 19:13:59,579 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-23 19:13:59,583 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:59,583 INFO uk.kissgergely.managementservice.api.controllers.AccountController [http-nio-8080-exec-1] addAccount called with: AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again]
+2020-01-23 19:13:59,584 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false] 
+2020-01-23 19:13:59,584 INFO uk.kissgergely.managementservice.dtos.AccountDTO [http-nio-8080-exec-1] transfer accountVO AccountVO [accountId=null, accountName=H12-775, accountDescription=HSBC savi5ng again again] -> to accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false] 
+2020-01-23 19:13:59,584 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false]
+2020-01-23 19:13:59,584 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: called with accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false]
+2020-01-23 19:13:59,587 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false] is already exist with the same name.
+2020-01-23 19:13:59,587 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [http-nio-8080-exec-1] saveAccount: accountEntity AccountEntity [id=null, accountName=H12-775, description=HSBC savi5ng again again, hostReference=5ed51f5c-bed2-4089-b349-9d80fd1cbbf9, deleted=false] is already exist with the same name.
+2020-01-23 19:13:59,588 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found] with root cause
+uk.kissgergely.managementservice.api.exceptions.AccountControllerException: Account not found
+	at uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl.createAccount(AccountControllerServiceImpl.java:48)
+	at uk.kissgergely.managementservice.api.controllers.AccountController.addAccount(AccountController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2020-01-23 19:56:56,557 INFO com.zaxxer.hikari.HikariDataSource [Thread-85] HikariPool-17 - Shutdown initiated...
+2020-01-23 19:56:56,764 INFO com.zaxxer.hikari.HikariDataSource [Thread-85] HikariPool-17 - Shutdown completed.
