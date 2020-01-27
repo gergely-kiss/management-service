@@ -27,10 +27,9 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	}
 
 	@Override
-	public List<AccountVO> getAllAccounts() throws AccountControllerException{
-		List<AccountVO> accountList = accountService.getAllAccounts().stream().map(accountEntity -> {
-			return new AccountDTO(accountEntity).getAccountVO();
-		}).collect(Collectors.toList());
+	public List<AccountVO> getAllAccounts() throws AccountControllerException {
+		List<AccountVO> accountList = accountService.getAllAccounts().stream()
+				.map(accountEntity -> new AccountDTO(accountEntity).getAccountVO()).collect(Collectors.toList());
 		if (accountList.isEmpty()) {
 			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND);
 		} else {

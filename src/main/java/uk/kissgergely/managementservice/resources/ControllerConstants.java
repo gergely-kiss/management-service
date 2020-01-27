@@ -1,7 +1,7 @@
 package uk.kissgergely.managementservice.resources;
 
 public class ControllerConstants {
-
+	private ControllerConstants() {}
 	
 	public static final String API_ROOT="/api";
 	public static final String REGEX_ALL = ".*";

@@ -13,7 +13,6 @@ public class AccountAlreadyExistException extends AccountControllerException{
 
 	public AccountAlreadyExistException(HttpStatus httpStatus, String exceptionMSG) {
 		super(httpStatus, exceptionMSG);
-		// TODO Auto-generated constructor stub
 	}
 
 

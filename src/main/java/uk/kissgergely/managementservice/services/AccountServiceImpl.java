@@ -34,7 +34,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public List<AccountEntity> getAllAccounts() {
 		LOG.debug("getAllAccounts: called.");
-		List<AccountEntity> accountEntityList = new ArrayList<AccountEntity>();
+		List<AccountEntity> accountEntityList = new ArrayList<>();
 		accountRepo.findByDeletedFalse().forEach(accountEntityList::add);
 		LOG.debug("getAllAccounts: accountEntityList {}", accountEntityList);
 		return accountEntityList;
@@ -54,27 +54,27 @@ public class AccountServiceImpl implements AccountService {
 			throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID);
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public AccountEntity updateAccount(AccountEntity accountEntity)
-			throws AccountNotFoundException, AccountAlreadyExistException {
-		LOG.info("updateAccount: called with {}", accountEntity);
-		AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
-		if (originalAccount.getAccountName().equals(accountEntity.getAccountName())) {
-			if (!originalAccount.getAccountName().equals(accountEntity.getHostReference())) {
-				throw new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
-			}
-		}
-		originalAccount.setAccountName(accountEntity.getAccountName());
-		originalAccount.setDescription(accountEntity.getDescription());		
-		originalAccount.setHostReference(accountEntity.getHostReference());
-		originalAccount.setDeleted(accountEntity.getDeleted());
-		accountRepo.save(originalAccount);
-		LOG.info("updateAccount: account updated: {}", originalAccount);
-		return originalAccount;
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public AccountEntity updateAccount(AccountEntity accountEntity)
+	    throws AccountNotFoundException, AccountAlreadyExistException {
+	LOG.info("updateAccount: called with {}", accountEntity);
+	AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
+	if (accountRepo.findByAccountName(accountEntity.getAccountName()).isPresent()
+		&& !originalAccount.getAccountName().equals(accountEntity.getHostReference())) {
+	    throw new AccountAlreadyExistException(
+		    ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
 	}
+	originalAccount.setAccountName(accountEntity.getAccountName());
+	originalAccount.setDescription(accountEntity.getDescription());
+	originalAccount.setHostReference(accountEntity.getHostReference());
+	originalAccount.setDeleted(accountEntity.getDeleted());
+	accountRepo.save(originalAccount);
+	LOG.info("updateAccount: account updated: {}", originalAccount);
+	return originalAccount;
+    }
 
 	/**
 	 * {@inheritDoc}
@@ -103,7 +103,7 @@ public class AccountServiceImpl implements AccountService {
 		LOG.info("deleteAccount: called with hostReference {}", hostReference);
 		AccountEntity accountToDelete = getAccount(hostReference);
 		LOG.info("deleteAccount: accountToDelete {}", accountToDelete);
-		if (accountToDelete.getDeleted()) {
+		if (accountToDelete.getDeleted().booleanValue()) {
 			LOG.info("deleteAccount: account already deleted accountToDelete {}", accountToDelete);
 			throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND);
 		}
