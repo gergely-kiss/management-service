@@ -22,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
 	private AccountRepository accountRepo;
 
 	private static final Logger LOG = LoggerFactory.getLogger(AccountServiceImpl.class);
-	
+
 	@Autowired
 	public AccountServiceImpl(AccountRepository accountRepo) {
 		this.accountRepo = accountRepo;
@@ -54,27 +54,27 @@ public class AccountServiceImpl implements AccountService {
 			throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID);
 	}
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public AccountEntity updateAccount(AccountEntity accountEntity)
-	    throws AccountNotFoundException, AccountAlreadyExistException {
-	LOG.info("updateAccount: called with {}", accountEntity);
-	AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
-	if (accountRepo.findByAccountName(accountEntity.getAccountName()).isPresent()
-		&& !originalAccount.getAccountName().equals(accountEntity.getHostReference())) {
-	    throw new AccountAlreadyExistException(
-		    ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public AccountEntity updateAccount(AccountEntity accountEntity)
+			throws AccountNotFoundException, AccountAlreadyExistException {
+		LOG.info("updateAccount: called with {}", accountEntity);
+		AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
+		if (accountRepo.findByName(accountEntity.getName()).isPresent()
+				&& !originalAccount.getName().equals(accountEntity.getHostReference())) {
+			throw new AccountAlreadyExistException(
+					ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
+		}
+		originalAccount.setName(accountEntity.getName());
+		originalAccount.setDescription(accountEntity.getDescription());
+		originalAccount.setHostReference(accountEntity.getHostReference());
+		originalAccount.setDeleted(accountEntity.getDeleted());
+		accountRepo.save(originalAccount);
+		LOG.info("updateAccount: account updated: {}", originalAccount);
+		return originalAccount;
 	}
-	originalAccount.setAccountName(accountEntity.getAccountName());
-	originalAccount.setDescription(accountEntity.getDescription());
-	originalAccount.setHostReference(accountEntity.getHostReference());
-	originalAccount.setDeleted(accountEntity.getDeleted());
-	accountRepo.save(originalAccount);
-	LOG.info("updateAccount: account updated: {}", originalAccount);
-	return originalAccount;
-    }
 
 	/**
 	 * {@inheritDoc}
@@ -82,14 +82,15 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public AccountEntity saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException {
 		LOG.info("saveAccount: called with accountEntity {}", accountEntity);
-		if (accountRepo.findByAccountName(accountEntity.getAccountName()).isPresent()) {
-			LOG.info("saveAccount: check if exist by name", accountEntity.getAccountName());
+		if (accountRepo.findByName(accountEntity.getName()).isPresent()) {
+			LOG.info("saveAccount: check if exist by name", accountEntity.getName());
 			throw new AccountAlreadyExistException(ServiceExceptionConstants.ACCOUNT_ALREADY_EXIST_WITH_THAT_NAME);
 		}
 		AccountEntity newAccount = new AccountEntity();
-		newAccount.setAccountName(accountEntity.getAccountName());
+		newAccount.setName(accountEntity.getName());
 		newAccount.setDescription(accountEntity.getDescription());
 		newAccount.setHostReference(accountEntity.getHostReference());
+		LOG.info("saveAccount: newAccount {}", newAccount);
 		accountRepo.save(newAccount);
 		LOG.info("saveAccount: account saved {}", newAccount);
 		return newAccount;
@@ -108,8 +109,7 @@ public class AccountServiceImpl implements AccountService {
 			throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND);
 		}
 		accountToDelete.setDeleted(true);
-		accountToDelete.setAccountName(
-				"__________" + accountToDelete.getAccountName() + "__________" + UUID.randomUUID().toString());
+		accountToDelete.setName("__________" + accountToDelete.getName() + "__________" + UUID.randomUUID().toString());
 		LOG.info("deleteAccount: deleted accountToDelete {}", accountToDelete);
 		accountRepo.save(accountToDelete);
 		return ServiceConstants.DELETING_ACCOUNT_WAS_SUCCESSFUL;

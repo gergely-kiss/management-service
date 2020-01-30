@@ -1,4 +1,4 @@
-package uk.kissgergely.managementservice.resources;
+package uk.kissgergely.managementservice.api.resources;
 
 public class ControllerConstants {
 	private ControllerConstants() {}

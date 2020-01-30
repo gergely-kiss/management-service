@@ -16,13 +16,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+import uk.kissgergely.managementservice.api.resources.ControllerConstants;
+import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.api.services.AccountControllerService;
-import uk.kissgergely.managementservice.resources.ControllerConstants;
-import uk.kissgergely.managementservice.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 @RestController

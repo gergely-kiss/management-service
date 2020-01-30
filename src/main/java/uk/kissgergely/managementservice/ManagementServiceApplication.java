@@ -1,7 +1,6 @@
 package uk.kissgergely.managementservice;
 
 import static springfox.documentation.builders.PathSelectors.regex;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +12,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-import uk.kissgergely.managementservice.resources.ControllerConstants;
+import uk.kissgergely.managementservice.api.resources.ControllerConstants;
 
 @SpringBootApplication
 @EnableSwagger2
@@ -34,7 +33,8 @@ public class ManagementServiceApplication {
 	}
 
 	private Contact getContactDetails() {
-		return new Contact(ControllerConstants.CONTACT_NAME, ControllerConstants.CONTACT_URL, ControllerConstants.CONTACT_EMAIL);
+		return new Contact(ControllerConstants.CONTACT_NAME, ControllerConstants.CONTACT_URL,
+				ControllerConstants.CONTACT_EMAIL);
 	}
 
 	private ApiInfo getApiInfo() {

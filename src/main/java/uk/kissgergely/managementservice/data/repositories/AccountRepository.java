@@ -13,6 +13,6 @@ public interface AccountRepository extends CrudRepository<AccountEntity, Integer
 
 	Optional<AccountEntity> findByHostReferenceAndDeletedFalse(String id);
 	List<AccountEntity> findByDeletedFalse();
-	Optional<AccountEntity> findByAccountName(String accountName);
+	Optional<AccountEntity> findByName(String accountName);
 
 }

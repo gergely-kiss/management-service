@@ -8,9 +8,8 @@ import uk.kissgergely.managementservice.vos.AccountVO;
 
 public class AccountDTO {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AccountDTO.class); 
-		
-	
+	private static final Logger LOG = LoggerFactory.getLogger(AccountDTO.class);
+
 	AccountEntity accountEntity;
 	AccountVO accountVO;
 
@@ -37,15 +36,15 @@ public class AccountDTO {
 			LOG.info("transfer accountVO {} -> to accountEntity {} ", accountVO, accountEntity);
 			return accountEntity;
 		} else {
-			AccountEntity accountEntity = new AccountEntity(accountVO.getAccountName(), accountVO.getAccountDescription());
+			AccountEntity accountEntity = new AccountEntity(accountVO.getAccountName(),
+					accountVO.getAccountDescription());
 			LOG.info("transfer accountVO {} -> to accountEntity {} ", accountVO, accountEntity);
 			return accountEntity;
 		}
 	}
 
 	private AccountVO transferEntity(AccountEntity accountEntity) {
-		return new AccountVO(accountEntity.getHostReference(), accountEntity.getAccountName(),
-				accountEntity.getDescription());
+		return new AccountVO(accountEntity.getHostReference(), accountEntity.getName(), accountEntity.getDescription());
 	}
 
 	public AccountEntity getAccountEntity() {

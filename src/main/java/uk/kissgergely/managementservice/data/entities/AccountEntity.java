@@ -9,51 +9,50 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "account")
+@Table(name = JpaConstants.ACCOUNT)
 public class AccountEntity {
 	
 	@Id
 	@GeneratedValue
-	@Column(name = "id", nullable = false)
+	@Column(name = JpaConstants.ID, nullable = false)
 	private Integer id;
 	
-	@Column(name = "account_name", nullable = false)
-	private String accountName;
+	@Column(name = JpaConstants.NAME)
+	private String name;
 	
-	@Column(name = "description")
+	@Column(name = JpaConstants.DESCRIPTION)
 	private String description;
 	
-	@Column(name = "host_reference")
+	@Column(name = JpaConstants.HOST_REFERENCE)
 	private String hostReference;
 	
-	@Column(name = "deleted")
+	@Column(name = JpaConstants.DELETED)
 	private Boolean deleted;
 		
 	public AccountEntity() {
-		this.deleted = false;
+		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
-	public AccountEntity(String accountName, String description) {
-		this.accountName = accountName;
+	public AccountEntity(String name, String description) {
+		this.name = name;
 		this.description = description;
 		this.hostReference = UUID.randomUUID().toString();
-		this.deleted = false;
+		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
-	public AccountEntity(String accountName, String description, String hostReference) {
-		this.accountName = accountName;
+	public AccountEntity(String name, String description, String hostReference) {
+		this.name = name;
 		this.description = description;
 		this.hostReference = hostReference;
-		this.deleted = false;
+		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
-	public AccountEntity(Integer id, String accountName, String description, String hostReference) {
-		super();
+	public AccountEntity(Integer id, String name, String description, String hostReference) {
 		this.id = id;
-		this.accountName = accountName;
+		this.name = name;
 		this.description = description;
 		this.hostReference = hostReference;
-		this.deleted = false;
+		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
 	public Integer getId() {
@@ -63,13 +62,12 @@ public class AccountEntity {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public String getAccountName() {
-		return accountName;
+	public String getName() {
+	    return name;
 	}
 
-	public void setAccountName(String accountName) {
-		this.accountName = accountName;
+	public void setName(String name) {
+	    this.name = name;
 	}
 
 	public String getDescription() {
@@ -98,18 +96,18 @@ public class AccountEntity {
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("AccountEntity [id=");
-		builder.append(id);
-		builder.append(", accountName=");
-		builder.append(accountName);
-		builder.append(", description=");
-		builder.append(description);
-		builder.append(", hostReference=");
-		builder.append(hostReference);
-		builder.append(", deleted=");
-		builder.append(deleted);
-		builder.append("]");
-		return builder.toString();
-	}	
+	    StringBuilder builder = new StringBuilder();
+	    builder.append("AccountEntity [id=");
+	    builder.append(id);
+	    builder.append(", name=");
+	    builder.append(name);
+	    builder.append(", description=");
+	    builder.append(description);
+	    builder.append(", hostReference=");
+	    builder.append(hostReference);
+	    builder.append(", deleted=");
+	    builder.append(deleted);
+	    builder.append("]");
+	    return builder.toString();
+	}
 }

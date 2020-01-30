@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.dtos.AccountDTO;
-import uk.kissgergely.managementservice.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;

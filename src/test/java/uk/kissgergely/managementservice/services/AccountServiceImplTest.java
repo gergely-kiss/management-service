@@ -21,140 +21,144 @@ import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistE
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
 import uk.kissgergely.managementservice.services.exceptions.ServiceExceptionConstants;
 import uk.kissgergely.managementservice.services.resources.ServiceConstants;
+import uk.kissgergely.managementservice.unittesttools.TestContstants;
 
 class AccountServiceImplTest {
 
-    AccountService accountService;
+	AccountService accountService;
 
-    @Mock
-    AccountRepository accountRepoMock;
+	@Mock
+	AccountRepository accountRepoMock;
 
-    AccountEntity accountEntity1;
-    AccountEntity accountEntity2;
+	AccountEntity accountEntity1;
+	AccountEntity accountEntity2;
 
-    AccountEntity savedAccountEntity1;
-    AccountEntity savedAccountEntity2;
-    AccountEntity savedAccountEntityDelted;
+	AccountEntity savedAccountEntity1;
+	AccountEntity savedAccountEntity2;
+	AccountEntity savedAccountEntityDelted;
 
-    List<AccountEntity> savedAccountEntityList;
+	List<AccountEntity> savedAccountEntityList;
 
-    @BeforeEach
-    void setUp() {
+	@BeforeEach
+	void setUp() {
 
-	MockitoAnnotations.initMocks(this);
-	accountService = new AccountServiceImpl(accountRepoMock);
+		MockitoAnnotations.initMocks(this);
+		accountService = new AccountServiceImpl(accountRepoMock);
 
-	accountEntity1 = new AccountEntity();
-	accountEntity1.setAccountName(TestContstants.ACCOUNT_NAME_1);
-	accountEntity1.setDescription(TestContstants.ACCOUNT_DESC_1);
-	accountEntity1.setHostReference(TestContstants.ACCOUNT_HOSTREF_1);
+		accountEntity1 = new AccountEntity();
+		accountEntity1.setName(TestContstants.TEST_NAME_1);
+		accountEntity1.setDescription(TestContstants.TEST_DESCRIPTION_1);
+		accountEntity1.setHostReference(TestContstants.TEST_HOST_REFERENCE_1);
 
-	accountEntity2 = new AccountEntity();
-	accountEntity2.setAccountName(TestContstants.ACCOUNT_NAME_2);
-	accountEntity2.setDescription(TestContstants.ACCOUNT_DESC_2);
-	accountEntity2.setHostReference(TestContstants.ACCOUNT_HOSTREF_2);
+		accountEntity2 = new AccountEntity();
+		accountEntity2.setName(TestContstants.TEST_NAME_2);
+		accountEntity2.setDescription(TestContstants.TEST_DESCRIPTION_2);
+		accountEntity2.setHostReference(TestContstants.TEST_HOST_REFERENCE_2);
 
-	savedAccountEntity1 = new AccountEntity();
-	savedAccountEntity1.setId(TestContstants.ACCOUNT_ID_1);
-	savedAccountEntity1.setAccountName(TestContstants.ACCOUNT_NAME_1);
-	savedAccountEntity1.setDescription(TestContstants.ACCOUNT_DESC_1);
-	savedAccountEntity1.setHostReference(TestContstants.ACCOUNT_HOSTREF_1);
-	savedAccountEntity1.setDeleted(false);
+		savedAccountEntity1 = new AccountEntity();
+		savedAccountEntity1.setId(TestContstants.TEST_ID_1);
+		savedAccountEntity1.setName(TestContstants.TEST_NAME_1);
+		savedAccountEntity1.setDescription(TestContstants.TEST_DESCRIPTION_1);
+		savedAccountEntity1.setHostReference(TestContstants.TEST_HOST_REFERENCE_1);
+		savedAccountEntity1.setDeleted(false);
 
-	savedAccountEntity2 = new AccountEntity();
-	savedAccountEntity2.setId(TestContstants.ACCOUNT_ID_2);
-	savedAccountEntity2.setAccountName(TestContstants.ACCOUNT_NAME_2);
-	savedAccountEntity2.setDescription(TestContstants.ACCOUNT_DESC_2);
-	savedAccountEntity2.setHostReference(TestContstants.ACCOUNT_HOSTREF_2);
-	savedAccountEntity2.setDeleted(false);
+		savedAccountEntity2 = new AccountEntity();
+		savedAccountEntity2.setId(TestContstants.TEST_ID_2);
+		savedAccountEntity2.setName(TestContstants.TEST_NAME_2);
+		savedAccountEntity2.setDescription(TestContstants.TEST_DESCRIPTION_2);
+		savedAccountEntity2.setHostReference(TestContstants.TEST_HOST_REFERENCE_2);
 
-	savedAccountEntityList = new ArrayList<AccountEntity>();
-	savedAccountEntityList.add(savedAccountEntity1);
-	savedAccountEntityList.add(savedAccountEntity2);
+		savedAccountEntity2.setDeleted(false);
 
-	when(accountRepoMock.save(accountEntity1)).thenReturn(savedAccountEntity1);
-	when(accountRepoMock.save(accountEntity2)).thenReturn(savedAccountEntity2);
-	when(accountRepoMock.findByDeletedFalse()).thenReturn(savedAccountEntityList);
-	when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.ACCOUNT_HOSTREF_1))
-		.thenReturn(Optional.of(savedAccountEntity1));
-	when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.ACCOUNT_HOSTREF_2))
-		.thenReturn(Optional.of(savedAccountEntity2));
-	when(accountRepoMock.save(savedAccountEntity1)).thenReturn(savedAccountEntity1);
-	when(accountRepoMock.findByAccountName(eq(TestContstants.NAME_ALREADY_EXIST)))
-		.thenReturn(Optional.of(savedAccountEntity1));
-	when(accountRepoMock.findByAccountName(eq(TestContstants.NAME_NOT_FOUND)))
-		.thenReturn(Optional.of(savedAccountEntity1));
+		savedAccountEntityList = new ArrayList<AccountEntity>();
+		savedAccountEntityList.add(savedAccountEntity1);
+		savedAccountEntityList.add(savedAccountEntity2);
 
-    }
+		when(accountRepoMock.save(accountEntity1)).thenReturn(savedAccountEntity1);
+		when(accountRepoMock.save(accountEntity2)).thenReturn(savedAccountEntity2);
+		when(accountRepoMock.findByDeletedFalse()).thenReturn(savedAccountEntityList);
+		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
+				.thenReturn(Optional.of(savedAccountEntity1));
+		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_2))
+				.thenReturn(Optional.of(savedAccountEntity2));
+		when(accountRepoMock.save(savedAccountEntity1)).thenReturn(savedAccountEntity1);
+		when(accountRepoMock.findByName(eq(TestContstants.TEST_NAME_ALREADY_EXIST)))
+				.thenReturn(Optional.of(savedAccountEntity1));
+		when(accountRepoMock.findByName(eq(TestContstants.TEST_NAME_NOT_FOUND)))
+				.thenReturn(Optional.of(savedAccountEntity1));
 
-    @Test
-    void testGetAllAccounts() {
-	List<AccountEntity> getAllAccountEntityList = accountService.getAllAccounts();
-	assertEquals(savedAccountEntityList, getAllAccountEntityList);
-    }
+	}
 
-    @Test
-    void testGetAccount() throws AccountNotFoundException {
-	AccountEntity account = accountService.getAccount(TestContstants.ACCOUNT_HOSTREF_1);
-	assertEquals(account, savedAccountEntity1);
-    }
+	@Test
+	void testGetAllAccounts() {
+		List<AccountEntity> getAllAccountEntityList = accountService.getAllAccounts();
+		assertEquals(savedAccountEntityList, getAllAccountEntityList);
+	}
 
-    @Test
-    void testGetAccountThrowException() {
-	Exception exception = assertThrows(AccountNotFoundException.class, () -> {
-	    accountService.getAccount(TestContstants.NAME_NOT_FOUND);
-	});
-	assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_NOT_FOUND));
-    }
+	@Test
+	void testGetAccount() throws AccountNotFoundException {
+		AccountEntity account = accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1);
+		assertEquals(account, savedAccountEntity1);
+	}
 
-    @Test
-    void testUpdateAccount() throws AccountNotFoundException, AccountAlreadyExistException {
-	savedAccountEntity1.setAccountName(TestContstants.ACCOUNT_NAME_1 + "UPDATE");
-	savedAccountEntity1.setDescription(TestContstants.ACCOUNT_DESC_1 + "UPDATE");
-	AccountEntity account = accountService.updateAccount(savedAccountEntity1);
-	assertEquals(TestContstants.ACCOUNT_NAME_1 + "UPDATE", account.getAccountName());
-	assertEquals(TestContstants.ACCOUNT_DESC_1 + "UPDATE", account.getDescription());
-    }
-    @Test
-    void testUpdateAccountThrowsException() {
-	savedAccountEntity1.setAccountName(TestContstants.NAME_ALREADY_EXIST);
-	Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
-	    accountService.updateAccount(savedAccountEntity1);
-	});
-	assertEquals(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME, exception.getMessage());
-    }
+	@Test
+	void testGetAccountThrowException() {
+		Exception exception = assertThrows(AccountNotFoundException.class, () -> {
+			accountService.getAccount(TestContstants.TEST_NAME_NOT_FOUND);
+		});
+		assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_NOT_FOUND));
+	}
 
-    @Test
-    void testSaveAccount() throws AccountAlreadyExistException {
-	AccountEntity account = accountService.saveAccount(accountEntity1);
-	assertEquals(account.getAccountName(), savedAccountEntity1.getAccountName());
-	assertEquals(account.getHostReference(), savedAccountEntity1.getHostReference());
-	assertEquals(account.getDeleted(), savedAccountEntity1.getDeleted());
-	assertEquals(account.getDescription(), savedAccountEntity1.getDescription());
-	assertEquals(TestContstants.ACCOUNT_ID_1, savedAccountEntity1.getId());
-    }
+	@Test
+	void testUpdateAccount() throws AccountNotFoundException, AccountAlreadyExistException {
+		savedAccountEntity1.setName(TestContstants.TEST_NAME_1 + "UPDATE");
+		savedAccountEntity1.setDescription(TestContstants.TEST_DESCRIPTION_1 + "UPDATE");
+		AccountEntity account = accountService.updateAccount(savedAccountEntity1);
+		assertEquals(TestContstants.TEST_NAME_1 + "UPDATE", account.getName());
+		assertEquals(TestContstants.TEST_DESCRIPTION_1 + "UPDATE", account.getDescription());
+	}
 
-    @Test
-    void testSaveAccountThrowException() {
-	savedAccountEntity1.setAccountName(TestContstants.NAME_ALREADY_EXIST);
-	Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
-	    accountService.saveAccount(savedAccountEntity1);
-	});
-	assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_ALREADY_EXIST_WITH_THAT_NAME));
-    }
+	@Test
+	void testUpdateAccountThrowsException() {
+		savedAccountEntity1.setName(TestContstants.TEST_NAME_ALREADY_EXIST);
+		Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
+			accountService.updateAccount(savedAccountEntity1);
+		});
+		assertEquals(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME,
+				exception.getMessage());
+	}
 
-    @Test
-    void testDeleteAccount() throws AccountNotFoundException {
-	assertEquals(ServiceConstants.DELETING_ACCOUNT_WAS_SUCCESSFUL,
-		accountService.deleteAccount(savedAccountEntity1.getHostReference()));
-    }
+	@Test
+	void testSaveAccount() throws AccountAlreadyExistException {
+		AccountEntity account = accountService.saveAccount(accountEntity1);
+		assertEquals(account.getName(), savedAccountEntity1.getName());
+		assertEquals(account.getHostReference(), savedAccountEntity1.getHostReference());
+		assertEquals(account.getDeleted(), savedAccountEntity1.getDeleted());
+		assertEquals(account.getDescription(), savedAccountEntity1.getDescription());
+		assertEquals(TestContstants.TEST_ID_1, savedAccountEntity1.getId());
+	}
 
-    @Test
-    void testDeleteAccountThrowsException() {
-	savedAccountEntity1.setDeleted(true);
-	Exception exception = assertThrows(AccountNotFoundException.class, () -> {
-	    accountService.deleteAccount(savedAccountEntity1.getHostReference());
-	});
-	assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_NOT_FOUND));
-    }
+	@Test
+	void testSaveAccountThrowException() {
+		savedAccountEntity1.setName(TestContstants.TEST_NAME_ALREADY_EXIST);
+		Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
+			accountService.saveAccount(savedAccountEntity1);
+		});
+		assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_ALREADY_EXIST_WITH_THAT_NAME));
+	}
+
+	@Test
+	void testDeleteAccount() throws AccountNotFoundException {
+		assertEquals(ServiceConstants.DELETING_ACCOUNT_WAS_SUCCESSFUL,
+				accountService.deleteAccount(savedAccountEntity1.getHostReference()));
+	}
+
+	@Test
+	void testDeleteAccountThrowsException() {
+		savedAccountEntity1.setDeleted(true);
+		Exception exception = assertThrows(AccountNotFoundException.class, () -> {
+			accountService.deleteAccount(savedAccountEntity1.getHostReference());
+		});
+		assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_NOT_FOUND));
+	}
 }
