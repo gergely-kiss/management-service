@@ -59,8 +59,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	public AccountVO createAccount(AccountVO account) throws AccountControllerException {
 		LOG.info("createAccount: called with account {}", account);
 		try {
-			AccountVO createdAccount = new AccountDTO(accountService.saveAccount(new AccountDTO(account).getAccountEntity()))
-					.getAccountVO();
+			AccountVO createdAccount = new AccountDTO(
+					accountService.saveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
 			LOG.info("createAccount: createdAccount {}", createdAccount);
 			return createdAccount;
 		} catch (ServiceException e) {
@@ -73,9 +73,8 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	public AccountVO updateAccount(AccountVO account) throws AccountControllerException {
 		LOG.info("updateAccount : called with account {}", account);
 		try {
-			AccountVO updatedAccount = new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
+			return new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
-			return updatedAccount;
 		} catch (AccountNotFoundException e) {
 			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		} catch (AccountAlreadyExistException e) {
@@ -88,7 +87,9 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	public String deleteAccount(String id) throws AccountControllerException {
 		LOG.info("deleteAccount: called with id {}", id);
 		try {
-			return accountService.deleteAccount(id);
+
+			accountService.deleteAccount(id);
+			return ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY;
 		} catch (AccountNotFoundException e) {
 			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		}

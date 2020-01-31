@@ -21,5 +21,8 @@ public class TestContstants {
 	public static final String NAME_FOR_DELETE = "name for delete";
 	public static final String NAME_NOT_FOUND = "name not found";
 
+	public static final String ACCOUNT_1_RESPONSE_BODY = "{\"accountId\":\"4cc0unt-h0str3f-one\",\"accountName\":\"Account name one\",\"accountDescription\":\"Account desc one\"}";
 	public static final String ACCOUNT_LIST_RESPONSE_BODY = "[{\"accountId\":\"4cc0unt-h0str3f-one\",\"accountName\":\"Account name one\",\"accountDescription\":\"Account desc one\"},{\"accountId\":\"4cc0unt-h0str3f-two\",\"accountName\":\"Account name two\",\"accountDescription\":\"Account desc two\"}]";
+	public static final String ACCOUNT_HOSTREF_NOT_FOUND = "4cc0unt-h0str3f-NOT_FOUND";
+	public static final String ACCOUNT_1_POST_REQUEST = "{\"accountName\":\"Account name one\",\"accountDescription\":\"Account desc one\"}";
 }
