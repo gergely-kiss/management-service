@@ -39,7 +39,7 @@ public class AccountController {
 		this.accountControllerService = accountControllerService;
 	}
 
-	@GetMapping("/")
+	@GetMapping
 	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.NO_ACCOUNT_FOUND) })
 	public List<AccountVO> getAccountList() throws AccountControllerException {
 		List<AccountVO> accountVOList = accountControllerService.getAllAccounts();
@@ -55,7 +55,7 @@ public class AccountController {
 		return accountControllerService.getAccountById(id);
 	}
 
-	@PostMapping("/")
+	@PostMapping
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	@ApiResponses(value = { @ApiResponse(code = 201, message = ControllerResponseConstants.CREATED),
 			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
@@ -66,7 +66,7 @@ public class AccountController {
 		return new ResponseEntity<>(accountVO, HttpStatus.CREATED);
 	}
 
-	@PutMapping("/")
+	@PutMapping
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	@ApiResponses(value = {
 			@ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_UPDATED_SUCCESSFULLY),

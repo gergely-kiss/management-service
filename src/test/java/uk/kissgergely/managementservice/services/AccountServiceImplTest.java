@@ -3,7 +3,6 @@ package uk.kissgergely.managementservice.services;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -82,9 +81,9 @@ class AccountServiceImplTest {
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_2))
 				.thenReturn(Optional.of(savedAccountEntity2));
 		when(accountRepoMock.save(savedAccountEntity1)).thenReturn(savedAccountEntity1);
-		when(accountRepoMock.findByName(eq(TestContstants.TEST_NAME_ALREADY_EXIST)))
+		when(accountRepoMock.findByName(TestContstants.TEST_NAME_ALREADY_EXIST))
 				.thenReturn(Optional.of(savedAccountEntity1));
-		when(accountRepoMock.findByName(eq(TestContstants.TEST_NAME_NOT_FOUND)))
+		when(accountRepoMock.findByName(TestContstants.TEST_NAME_NOT_FOUND))
 				.thenReturn(Optional.of(savedAccountEntity1));
 
 	}
