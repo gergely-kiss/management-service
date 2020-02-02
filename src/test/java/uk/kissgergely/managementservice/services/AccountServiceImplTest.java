@@ -31,6 +31,7 @@ class AccountServiceImplTest {
 
 	AccountEntity accountEntity1;
 	AccountEntity accountEntity2;
+	AccountEntity accountEntityToSave;
 
 	AccountEntity savedAccountEntity1;
 	AccountEntity savedAccountEntity2;
@@ -69,13 +70,9 @@ class AccountServiceImplTest {
 
 		savedAccountEntity2.setDeleted(false);
 
-		savedAccountEntityList = new ArrayList<AccountEntity>();
-		savedAccountEntityList.add(savedAccountEntity1);
-		savedAccountEntityList.add(savedAccountEntity2);
-
 		when(accountRepoMock.save(accountEntity1)).thenReturn(savedAccountEntity1);
 		when(accountRepoMock.save(accountEntity2)).thenReturn(savedAccountEntity2);
-		when(accountRepoMock.findByDeletedFalse()).thenReturn(savedAccountEntityList);
+
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
 				.thenReturn(Optional.of(savedAccountEntity1));
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_2))
@@ -90,20 +87,23 @@ class AccountServiceImplTest {
 
 	@Test
 	void testGetAllAccounts() {
-		List<AccountEntity> getAllAccountEntityList = accountService.getAllAccounts();
-		assertEquals(savedAccountEntityList, getAllAccountEntityList);
+		savedAccountEntityList = new ArrayList<AccountEntity>();
+		savedAccountEntityList.add(savedAccountEntity1);
+		savedAccountEntityList.add(savedAccountEntity2);
+
+		when(accountRepoMock.findByDeletedFalse()).thenReturn(savedAccountEntityList);
+		assertEquals(savedAccountEntityList, accountService.getAllAccounts());
 	}
 
 	@Test
-	void testGetAllAccountsException() {
-		List<AccountEntity> getAllAccountEntityList = accountService.getAllAccounts();
-		assertEquals(savedAccountEntityList, getAllAccountEntityList);
+	void testGetAllEmptyList() {
+		when(accountRepoMock.findByDeletedFalse()).thenReturn(new ArrayList<AccountEntity>());
+		assertEquals(new ArrayList<AccountEntity>(), accountService.getAllAccounts());
 	}
-	
+
 	@Test
 	void testGetAccount() throws AccountNotFoundException {
-		AccountEntity account = accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1);
-		assertEquals(account, savedAccountEntity1);
+		assertEquals(accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1), savedAccountEntity1);
 	}
 
 	@Test

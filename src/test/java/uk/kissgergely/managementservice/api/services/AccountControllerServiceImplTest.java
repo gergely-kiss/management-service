@@ -32,6 +32,8 @@ class AccountControllerServiceImplTest {
 	void setUp() throws AccountNotFoundException {
 		MockitoAnnotations.initMocks(this);
 		
+		
+		
 		accountControllerService = new AccountControllerServiceImpl(accountService);
 		when(accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1)).thenReturn(accountEntity);
 		
