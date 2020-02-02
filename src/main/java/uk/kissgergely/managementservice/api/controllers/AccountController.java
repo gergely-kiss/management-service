@@ -62,7 +62,7 @@ public class AccountController {
 	public ResponseEntity<AccountVO> addAccount(@RequestBody AccountVO account) {
 		LOG.info("addAccount: called with {}", account);
 		AccountVO accountVO = accountControllerService.createAccount(account);
-		LOG.info("addAccount: account added {} ", account);
+		LOG.info("addAccount: account added {} ", accountVO);
 		return new ResponseEntity<>(accountVO, HttpStatus.CREATED);
 	}
 
