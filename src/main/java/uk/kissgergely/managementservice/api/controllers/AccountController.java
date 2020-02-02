@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+import uk.kissgergely.managementservice.api.exceptions.AccountAlreadyExistControllerException;
+import uk.kissgergely.managementservice.api.exceptions.AccountNotFoundControllerException;
 import uk.kissgergely.managementservice.api.resources.ControllerConstants;
 import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.api.services.AccountControllerService;
@@ -41,7 +42,7 @@ public class AccountController {
 
 	@GetMapping
 	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.NO_ACCOUNT_FOUND) })
-	public List<AccountVO> getAccountList() throws AccountControllerException {
+	public List<AccountVO> getAccountList() throws AccountNotFoundControllerException {
 		List<AccountVO> accountVOList = accountControllerService.getAllAccounts();
 		LOG.info("getAccountList: accountVOList {}", accountVOList);
 		return accountVOList;
@@ -50,7 +51,7 @@ public class AccountController {
 	@GetMapping("/{id}")
 	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND) })
 	public AccountVO getAccount(@ApiParam(value = "Id for the account", required = true) @PathVariable String id)
-			throws AccountControllerException {
+			throws AccountNotFoundControllerException {
 		LOG.info("{}", id);
 		return accountControllerService.getAccountById(id);
 	}
@@ -59,7 +60,8 @@ public class AccountController {
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	@ApiResponses(value = { @ApiResponse(code = 201, message = ControllerResponseConstants.CREATED),
 			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
-	public ResponseEntity<AccountVO> addAccount(@RequestBody AccountVO account) {
+	public ResponseEntity<AccountVO> addAccount(@RequestBody AccountVO account)
+			throws AccountAlreadyExistControllerException {
 		LOG.info("addAccount: called with {}", account);
 		AccountVO accountVO = accountControllerService.createAccount(account);
 		LOG.info("addAccount: account added {} ", accountVO);
@@ -73,7 +75,8 @@ public class AccountController {
 			@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND),
 			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
 
-	public ResponseEntity<AccountVO> updateAccount(@RequestBody AccountVO account) throws AccountControllerException {
+	public ResponseEntity<AccountVO> updateAccount(@RequestBody AccountVO account)
+			throws AccountAlreadyExistControllerException, AccountNotFoundControllerException {
 		AccountVO accountVO = accountControllerService.updateAccount(account);
 		LOG.info("updateAccount: account updated {} ", account);
 		return new ResponseEntity<>(accountVO, HttpStatus.valueOf(204));
@@ -86,7 +89,7 @@ public class AccountController {
 			@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND) })
 	public ResponseEntity<String> deletAccount(
 			@ApiParam(value = "Id for the account", required = true) @PathVariable String id)
-			throws AccountControllerException {
+			throws AccountNotFoundControllerException {
 		LOG.info("{}", id);
 		return ResponseEntity.ok(accountControllerService.deleteAccount(id));
 	}

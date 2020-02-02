@@ -95,6 +95,12 @@ class AccountServiceImplTest {
 	}
 
 	@Test
+	void testGetAllAccountsException() {
+		List<AccountEntity> getAllAccountEntityList = accountService.getAllAccounts();
+		assertEquals(savedAccountEntityList, getAllAccountEntityList);
+	}
+	
+	@Test
 	void testGetAccount() throws AccountNotFoundException {
 		AccountEntity account = accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1);
 		assertEquals(account, savedAccountEntity1);

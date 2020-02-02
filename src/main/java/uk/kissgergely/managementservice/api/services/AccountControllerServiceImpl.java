@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+import uk.kissgergely.managementservice.api.exceptions.AccountAlreadyExistControllerException;
+import uk.kissgergely.managementservice.api.exceptions.AccountNotFoundControllerException;
 import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.dtos.AccountDTO;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
-import uk.kissgergely.managementservice.services.exceptions.ServiceException;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
 @Service
@@ -31,67 +31,67 @@ public class AccountControllerServiceImpl implements AccountControllerService {
 	}
 
 	@Override
-	public List<AccountVO> getAllAccounts() throws AccountControllerException {
+	public List<AccountVO> getAllAccounts() throws AccountNotFoundControllerException {
 		LOG.info("getAllAccounts: called");
 		List<AccountVO> accountList = accountService.getAllAccounts().stream()
 				.map(accountEntity -> new AccountDTO(accountEntity).getAccountVO()).collect(Collectors.toList());
 		LOG.info("getAllAccounts: accountList {}", accountList);
 		if (accountList.isEmpty()) {
-			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND);
+			throw new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND);
 		} else {
 			return accountList;
 		}
 	}
 
 	@Override
-	public AccountVO getAccountById(String id) throws AccountControllerException {
-		LOG.info("getAccountById: was called with id {}".concat(id));
+	public AccountVO getAccountById(String id) throws AccountNotFoundControllerException {
+		LOG.info("getAccountById: was called with id {}",id);
 		try {
 			AccountVO account = new AccountDTO(accountService.getAccount(id)).getAccountVO();
 			LOG.info("getAccountById: account {}", account);
 			return account;
 		} catch (AccountNotFoundException e) {
-			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+			throw new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		}
 	}
 
 	@Override
-	public AccountVO createAccount(AccountVO account) throws AccountControllerException {
+	public AccountVO createAccount(AccountVO account) throws AccountAlreadyExistControllerException {
 		LOG.info("createAccount: called with account {}", account);
 		try {
 			AccountVO createdAccount = new AccountDTO(
 					accountService.saveAccount(new AccountDTO(account).getAccountEntity())).getAccountVO();
 			LOG.info("createAccount: createdAccount {}", createdAccount);
 			return createdAccount;
-		} catch (ServiceException e) {
-			throw new AccountControllerException(HttpStatus.CONFLICT,
+		} catch (AccountAlreadyExistException e) {
+			throw new AccountAlreadyExistControllerException(HttpStatus.CONFLICT,
 					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST);
 		}
 	}
 
 	@Override
-	public AccountVO updateAccount(AccountVO account) throws AccountControllerException {
+	public AccountVO updateAccount(AccountVO account) throws AccountNotFoundControllerException, AccountAlreadyExistControllerException {
 		LOG.info("updateAccount : called with account {}", account);
 		try {
 			return new AccountDTO(accountService.updateAccount(new AccountDTO(account).getAccountEntity()))
 					.getAccountVO();
 		} catch (AccountNotFoundException e) {
-			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+			throw new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		} catch (AccountAlreadyExistException e) {
-			throw new AccountControllerException(HttpStatus.CONFLICT,
+			throw new AccountAlreadyExistControllerException(HttpStatus.CONFLICT,
 					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
 		}
 	}
 
 	@Override
-	public String deleteAccount(String id) throws AccountControllerException {
+	public String deleteAccount(String id) throws AccountNotFoundControllerException {
 		LOG.info("deleteAccount: called with id {}", id);
 		try {
 
 			accountService.deleteAccount(id);
 			return ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY;
 		} catch (AccountNotFoundException e) {
-			throw new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+			throw new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND);
 		}
 	}
 

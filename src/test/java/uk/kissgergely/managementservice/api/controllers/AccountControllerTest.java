@@ -25,11 +25,13 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import uk.kissgergely.managementservice.api.exceptions.AccountControllerException;
+
+import uk.kissgergely.managementservice.api.exceptions.AccountAlreadyExistControllerException;
+import uk.kissgergely.managementservice.api.exceptions.AccountNotFoundControllerException;
 import uk.kissgergely.managementservice.api.resources.ControllerConstants;
 import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.api.services.AccountControllerService;
-import uk.kissgergely.managementservice.services.TestContstants;
+import uk.kissgergely.managementservice.unittesttools.TestContstants;
 import uk.kissgergely.managementservice.unittesttools.TestUntils;
 import uk.kissgergely.managementservice.vos.AccountVO;
 
@@ -55,10 +57,10 @@ class AccountControllerTest {
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
 		this.mockMvc = MockMvcBuilders.standaloneSetup(accountController).build();
-		accountVO1 = new AccountVO(TestContstants.ACCOUNT_HOSTREF_1, TestContstants.ACCOUNT_NAME_1,
-				TestContstants.ACCOUNT_DESC_1);
-		accountVO2 = new AccountVO(TestContstants.ACCOUNT_HOSTREF_2, TestContstants.ACCOUNT_NAME_2,
-				TestContstants.ACCOUNT_DESC_2);
+		accountVO1 = new AccountVO(TestContstants.TEST_HOST_REFERENCE_1, TestContstants.TEST_NAME_1,
+				TestContstants.TEST_DESCRIPTION_1);
+		accountVO2 = new AccountVO(TestContstants.TEST_HOST_REFERENCE_2, TestContstants.TEST_NAME_2,
+				TestContstants.TEST_DESCRIPTION_2);
 
 	}
 
@@ -77,15 +79,15 @@ class AccountControllerTest {
 	@Test
 	void getAllException() throws Exception {
 		when(accountControllerService.getAllAccounts()).thenThrow(
-				new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
+				new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
 
 		this.mockMvc.perform(get(URL).characterEncoding("UTF-8")).andDo(print()).andExpect(status().isNotFound());
 	}
 
 	@Test
 	void getById() throws Exception {
-		when(accountControllerService.getAccountById(TestContstants.ACCOUNT_HOSTREF_1)).thenReturn(accountVO1);
-		this.mockMvc.perform(get(URL + "/" + TestContstants.ACCOUNT_HOSTREF_1).characterEncoding("UTF-8"))
+		when(accountControllerService.getAccountById(TestContstants.TEST_HOST_REFERENCE_1)).thenReturn(accountVO1);
+		this.mockMvc.perform(get(URL + "/" + TestContstants.TEST_HOST_REFERENCE_1).characterEncoding("UTF-8"))
 				.andDo(print()).andExpect(status().isOk()).andExpect(content().contentType(MediaType.APPLICATION_JSON))
 				.andExpect(content().string(TestUntils.asJsonString(accountVO1)));
 	}
@@ -93,7 +95,7 @@ class AccountControllerTest {
 	@Test
 	void getByIdException() throws Exception {
 		when(accountControllerService.getAccountById(TestContstants.ACCOUNT_HOSTREF_NOT_FOUND)).thenThrow(
-				new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
+				new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
 
 		this.mockMvc.perform(get(URL + "/" + TestContstants.ACCOUNT_HOSTREF_NOT_FOUND).characterEncoding("UTF-8"))
 				.andDo(print()).andExpect(status().isNotFound());
@@ -101,9 +103,9 @@ class AccountControllerTest {
 
 	@Test
 	void deleteById() throws Exception {
-		when(accountControllerService.deleteAccount(TestContstants.ACCOUNT_HOSTREF_1))
+		when(accountControllerService.deleteAccount(TestContstants.TEST_HOST_REFERENCE_1))
 				.thenReturn(ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY);
-		this.mockMvc.perform(delete(URL + "/" + TestContstants.ACCOUNT_HOSTREF_1).characterEncoding("UTF-8"))
+		this.mockMvc.perform(delete(URL + "/" + TestContstants.TEST_HOST_REFERENCE_1).characterEncoding("UTF-8"))
 				.andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY));
 	}
@@ -111,7 +113,7 @@ class AccountControllerTest {
 	@Test
 	void deleteByIdException() throws Exception {
 		when(accountControllerService.deleteAccount(TestContstants.ACCOUNT_HOSTREF_NOT_FOUND)).thenThrow(
-				new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
+				new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));
 		this.mockMvc.perform(delete(URL + "/" + TestContstants.ACCOUNT_HOSTREF_NOT_FOUND).characterEncoding("UTF-8"))
 				.andDo(print()).andExpect(status().isNotFound());
 	}
@@ -119,7 +121,7 @@ class AccountControllerTest {
 	@Test
 	void create() throws Exception {
 		AccountVO accountVO1NotSaved = new AccountVO();
-		accountVO1NotSaved.setAccountName(TestContstants.ACCOUNT_NAME_1);
+		accountVO1NotSaved.setAccountName(TestContstants.TEST_NAME_1);
 		when(accountControllerService.createAccount(any(AccountVO.class))).thenReturn(accountVO1);
 		this.mockMvc
 				.perform(post(URL + "/").contentType(MediaType.APPLICATION_JSON)
@@ -131,7 +133,7 @@ class AccountControllerTest {
 	@Test
 	void createException() throws Exception {
 		when(accountControllerService.createAccount(any(AccountVO.class))).thenThrow(
-				new AccountControllerException(HttpStatus.CONFLICT, ControllerResponseConstants.ACCOUNT_ALREADY_EXIST));
+				new AccountAlreadyExistControllerException(HttpStatus.CONFLICT, ControllerResponseConstants.ACCOUNT_ALREADY_EXIST));
 		this.mockMvc.perform(post(URL + "/").contentType(MediaType.APPLICATION_JSON).content(TestUntils.asJsonString(accountVO1))
 				.characterEncoding("UTF-8")).andExpect(status().isConflict());
 	}
@@ -149,7 +151,7 @@ class AccountControllerTest {
 	@Test
 	void updateException() throws Exception {
 		when(accountControllerService.updateAccount(any(AccountVO.class))).thenThrow(
-				new AccountControllerException(HttpStatus.CONFLICT, ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME));
+				new AccountAlreadyExistControllerException(HttpStatus.CONFLICT, ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME));
 		this.mockMvc
 				.perform(put(URL + "/").contentType(MediaType.APPLICATION_JSON).content(TestUntils.asJsonString(accountVO1))
 						.characterEncoding("UTF-8"))
@@ -159,7 +161,7 @@ class AccountControllerTest {
 	@Test
 	void updateExceptionAccountNotFound() throws Exception {
 		when(accountControllerService.updateAccount(any(AccountVO.class))).thenThrow(
-				new AccountControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND));
+				new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.ACCOUNT_NOT_FOUND));
 		this.mockMvc
 				.perform(put(URL + "/").contentType(MediaType.APPLICATION_JSON).content(TestUntils.asJsonString(accountVO1))
 						.characterEncoding("UTF-8"))
