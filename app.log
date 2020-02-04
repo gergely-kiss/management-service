@@ -188,3 +188,157 @@
 2020-02-04 20:24:58,679 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
 2020-02-04 20:24:59,185 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2020-02-04 20:24:59,188 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-02-04 20:33:29,046 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Starting AccountControllerTest on Cyber-Station with PID 695636 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 20:33:29,047 DEBUG uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 20:33:29,048 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] No active profile set, falling back to default profiles: default
+2020-02-04 20:33:30,597 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 20:33:30,664 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-04 20:33:30,798 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-04 20:33:31,158 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-02-04 20:33:31,322 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-02-04 20:33:31,338 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 20:33:31,939 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 20:33:32,747 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 20:33:33,433 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 20:33:33,452 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 20:33:33,480 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 20:33:33,592 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Started AccountControllerTest in 4.786 seconds (JVM running for 5.675)
+2020-02-04 20:33:33,845 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 20:33:34,017 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 20:33:34,076 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 20:33:34,095 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 20:33:34,148 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Starting AccountRepositoryTest on Cyber-Station with PID 695636 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 20:33:34,149 DEBUG uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 20:33:34,149 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] No active profile set, falling back to default profiles: default
+2020-02-04 20:33:34,577 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 20:33:34,584 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 20:33:34,625 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 20:33:34,915 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 20:33:35,199 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 20:33:35,200 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 20:33:35,205 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 20:33:35,230 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Started AccountRepositoryTest in 1.104 seconds (JVM running for 7.313)
+2020-02-04 20:33:35,484 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Starting ManagementServiceApplicationTests on Cyber-Station with PID 695636 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 20:33:35,485 DEBUG uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 20:33:35,485 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-04 20:33:35,823 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 20:33:35,828 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-2 - Starting...
+2020-02-04 20:33:35,829 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-2 - Start completed.
+2020-02-04 20:33:35,830 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 20:33:35,858 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 20:33:36,130 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 20:33:36,400 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 20:33:36,401 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 20:33:36,406 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 20:33:36,422 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Started ManagementServiceApplicationTests in 0.958 seconds (JVM running for 8.505)
+2020-02-04 20:33:36,455 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: called with accountEntity AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,456 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: newAccount AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,456 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: account saved AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,457 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,458 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,460 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: called with AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,460 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,460 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,460 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: account updated: AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,463 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test name not found
+2020-02-04 20:33:36,466 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,466 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,466 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 20:33:36,466 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 20:33:36,466 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: account already deleted accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 20:33:36,469 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: called.
+2020-02-04 20:33:36,469 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: accountEntityList [AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false], AccountEntity [id=2, name=test name two, description=test description two, hostReference=test-H0STR3F-h0str3f-two, deleted=false]]
+2020-02-04 20:33:36,471 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,471 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,472 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,472 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,472 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: deleted accountToDelete AccountEntity [id=1, name=__________test name one__________d847062e-c570-43ae-afbd-31badbd15905, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 20:33:36,475 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: called.
+2020-02-04 20:33:36,475 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: accountEntityList []
+2020-02-04 20:33:36,478 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: called with AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,478 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 20:33:36,478 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,480 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: called with accountEntity AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 20:33:36,480 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: check if exist by name
+2020-02-04 20:33:36,507 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-02-04 20:33:36,507 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown initiated...
+2020-02-04 20:33:36,512 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown completed.
+2020-02-04 20:33:36,512 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-02-04 21:39:10,653 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Starting AccountControllerTest on Cyber-Station with PID 702656 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 21:39:10,654 DEBUG uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 21:39:10,655 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] No active profile set, falling back to default profiles: default
+2020-02-04 21:39:12,105 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 21:39:12,178 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-04 21:39:12,318 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-04 21:39:12,667 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-02-04 21:39:12,828 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-02-04 21:39:12,844 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 21:39:13,449 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 21:39:14,217 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 21:39:14,862 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 21:39:14,885 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 21:39:14,919 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 21:39:15,025 INFO uk.kissgergely.managementservice.api.controllers.AccountControllerTest [main] Started AccountControllerTest in 4.619 seconds (JVM running for 5.465)
+2020-02-04 21:39:15,283 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 21:39:15,473 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 21:39:15,532 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 21:39:15,550 INFO uk.kissgergely.managementservice.api.controllers.AccountController [main] test-H0STR3F-h0str3f-one
+2020-02-04 21:39:15,570 INFO uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl [main] getAllAccounts: called
+2020-02-04 21:39:15,571 INFO uk.kissgergely.managementservice.api.services.AccountControllerServiceImpl [main] getAllAccounts: accountList [AccountResponse [id=test-H0STR3F-h0str3f-one, getAccountName()=test name one, getAccountDescription()=test description one]]
+2020-02-04 21:39:15,616 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Starting AccountRepositoryTest on Cyber-Station with PID 702656 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 21:39:15,616 DEBUG uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 21:39:15,616 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] No active profile set, falling back to default profiles: default
+2020-02-04 21:39:16,002 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 21:39:16,009 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 21:39:16,065 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 21:39:16,354 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 21:39:16,624 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 21:39:16,624 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 21:39:16,630 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 21:39:16,649 INFO uk.kissgergely.managementservice.data.repositories.AccountRepositoryTest [main] Started AccountRepositoryTest in 1.054 seconds (JVM running for 7.088)
+2020-02-04 21:39:16,886 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Starting ManagementServiceApplicationTests on Cyber-Station with PID 702656 (started by kiss- in C:\Users\kiss-\Documents\management-service)
+2020-02-04 21:39:16,887 DEBUG uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-04 21:39:16,887 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-04 21:39:17,249 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-04 21:39:17,254 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-2 - Starting...
+2020-02-04 21:39:17,255 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-2 - Start completed.
+2020-02-04 21:39:17,255 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-04 21:39:17,288 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-04 21:39:17,555 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-04 21:39:17,800 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-02-04 21:39:17,800 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-02-04 21:39:17,804 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-02-04 21:39:17,818 INFO uk.kissgergely.managementservice.ManagementServiceApplicationTests [main] Started ManagementServiceApplicationTests in 0.956 seconds (JVM running for 8.257)
+2020-02-04 21:39:17,852 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: called with accountEntity AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,853 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: newAccount AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,853 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: account saved AccountEntity [id=null, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,855 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,855 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,857 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: called with AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,857 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,857 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,857 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: account updated: AccountEntity [id=1, name=test name oneUPDATE, description=test description oneUPDATE, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,860 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test name not found
+2020-02-04 21:39:17,862 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,862 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,863 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 21:39:17,863 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 21:39:17,863 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: account already deleted accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 21:39:17,865 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: called.
+2020-02-04 21:39:17,865 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: accountEntityList [AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false], AccountEntity [id=2, name=test name two, description=test description two, hostReference=test-H0STR3F-h0str3f-two, deleted=false]]
+2020-02-04 21:39:17,867 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,867 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,868 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,868 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: accountToDelete AccountEntity [id=1, name=test name one, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,868 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] deleteAccount: deleted accountToDelete AccountEntity [id=1, name=__________test name one__________6c863069-6e3f-4d41-b657-8cc3e9842276, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=true]
+2020-02-04 21:39:17,870 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: called.
+2020-02-04 21:39:17,870 DEBUG uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAllAccounts: accountEntityList []
+2020-02-04 21:39:17,872 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] updateAccount: called with AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,873 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: called with hostReference test-H0STR3F-h0str3f-one
+2020-02-04 21:39:17,873 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] getAccount: accountEntity found AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,875 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: called with accountEntity AccountEntity [id=1, name=test name already exist, description=test description one, hostReference=test-H0STR3F-h0str3f-one, deleted=false]
+2020-02-04 21:39:17,876 INFO uk.kissgergely.managementservice.services.AccountServiceImpl [main] saveAccount: check if exist by name
+2020-02-04 21:39:17,904 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown initiated...
+2020-02-04 21:39:17,904 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-02-04 21:39:17,909 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-2 - Shutdown completed.
+2020-02-04 21:39:17,909 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
