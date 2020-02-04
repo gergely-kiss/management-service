@@ -10,8 +10,8 @@ public class TestContstants {
 	public static final String TEST_NAME_2 = "test name two";
 	public static final String TEST_DESCRIPTION_1 = "test description one";
 	public static final String TEST_DESCRIPTION_2 = "test description two";
-	public static final String TEST_HOST_REFERENCE_1 = "test H0STR3F-h0str3f-one";
-	public static final String TEST_HOST_REFERENCE_2 = "test H0STR3F-h0str3f-two";
+	public static final String TEST_HOST_REFERENCE_1 = "test-H0STR3F-h0str3f-one";
+	public static final String TEST_HOST_REFERENCE_2 = "test-H0STR3F-h0str3f-two";
 	public static final String TEST_NAME_ALREADY_EXIST = "test name already exist";
 	public static final String TEST_NAME_FOR_DELETE = "test name for delete";
 	public static final String TEST_NAME_NOT_FOUND = "test name not found";

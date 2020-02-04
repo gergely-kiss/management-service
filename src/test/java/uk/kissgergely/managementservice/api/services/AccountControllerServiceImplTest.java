@@ -16,8 +16,6 @@ import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
 import uk.kissgergely.managementservice.unittesttools.TestContstants;
-import uk.kissgergely.managementservice.vos.AccountVO;
-
 class AccountControllerServiceImplTest {
 	
 	AccountControllerService accountControllerService;
@@ -25,14 +23,12 @@ class AccountControllerServiceImplTest {
 	@Mock
 	AccountService accountService;
 	
-	AccountVO accountVO;
+
 	AccountEntity accountEntity;
 	
 	@BeforeEach
 	void setUp() throws AccountNotFoundException {
 		MockitoAnnotations.initMocks(this);
-		
-		
 		
 		accountControllerService = new AccountControllerServiceImpl(accountService);
 		when(accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1)).thenReturn(accountEntity);
