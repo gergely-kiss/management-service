@@ -15,7 +15,6 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import uk.kissgergely.managementservice.api.resources.ControllerConstants;
 import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.services.AccountService;
@@ -55,23 +54,21 @@ class AccountControllerServiceImplTest {
 		List<AccountEntity> accountEntityList = new ArrayList<>();
 		accountEntityList.add(accountEntity);
 		when(accountService.getAllAccounts()).thenReturn(accountEntityList);
-		
 		assertEquals(accountResponsesList.toString(), accountControllerService.getAllAccounts().toString());
 	}
 	
-	
-	//TODO FIX
-	//@Test
-	void getAllAccountsThrow() {
-		accountEntity.setId(TestContstants.TEST_ID_1);
-		List<AccountEntity> accountEntityList = new ArrayList<>();
-		accountEntityList.add(accountEntity);
-		when(accountService.getAllAccounts()).thenThrow(AccountNotFoundException.class);
-		AccountNotFoundException exception = assertThrows(AccountNotFoundException.class, () -> {
-			accountControllerService.getAllAccounts();
-		});
-		
-		assertEquals(exception.getMessage(), ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+
+	@Test
+	void getAccountById() {
+		assertEquals(accountResponse.toString(), accountControllerService.getAccountById(TestContstants.TEST_HOST_REFERENCE_1).toString());
 	}
 
+	@Test
+	void getAccountByIdThrow() {
+		AccountNotFoundException exception = assertThrows(AccountNotFoundException.class, ()->{
+			accountService.getAccount(TestContstants.TEST_NAME_NOT_FOUND);
+		});
+		assertEquals(exception, accountControllerService.getAccountById(TestContstants.TEST_NAME_NOT_FOUND));
+		
+	}
 }
