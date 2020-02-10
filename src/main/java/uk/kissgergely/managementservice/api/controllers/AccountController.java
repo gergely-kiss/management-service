@@ -1,6 +1,7 @@
 package uk.kissgergely.managementservice.api.controllers;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,9 @@ import uk.kissgergely.managementservice.api.exceptions.AccountNotFoundController
 import uk.kissgergely.managementservice.api.resources.ControllerConstants;
 import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
 import uk.kissgergely.managementservice.api.services.AccountControllerService;
+import uk.kissgergely.managementservice.dtos.AccountDTO;
+import uk.kissgergely.managementservice.services.AccountService;
+import uk.kissgergely.managementservice.services.AccountServiceImpl;
 import uk.kissgergely.managementservice.vos.AccountRequest;
 import uk.kissgergely.managementservice.vos.AccountResponse;
 
@@ -35,15 +39,22 @@ public class AccountController {
 	private static final Logger LOG = LoggerFactory.getLogger(AccountController.class);
 
 	AccountControllerService accountControllerService;
+	AccountService accountService;
 
 	@Autowired
-	public AccountController(AccountControllerService accountControllerService) {
+	public AccountController(AccountControllerService accountControllerService, AccountService accountService) {
 		this.accountControllerService = accountControllerService;
+		this.accountService = accountService;
 	}
 
 	@GetMapping
 	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.NO_ACCOUNT_FOUND) })
 	public ResponseEntity<List<AccountResponse>> getAccountList() throws AccountNotFoundControllerException {
+		List<AccountResponse> accountList = accountService.getAllAccounts().stream()
+				.map(AccountDTO::transferEntityToResponse).collect(Collectors.toList());
+		if (accountList.isEmpty()) {
+			throw new AccountNotFoundControllerException(HttpStatus.NOT_FOUND,
+					ControllerResponseConstants.NO_ACCOUNT_FOUND);}
 		return  new ResponseEntity<>(accountControllerService.getAllAccounts(), HttpStatus.OK);
 	}
 
@@ -61,8 +72,7 @@ public class AccountController {
 			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
 	public ResponseEntity<AccountResponse> addAccount(
 			@ApiParam(value = "Id for the account", required = true) @PathVariable String id,
-			@RequestBody AccountRequest accountRequest)
-			throws AccountAlreadyExistControllerException {
+			@RequestBody AccountRequest accountRequest) throws AccountAlreadyExistControllerException {
 		return new ResponseEntity<>(accountControllerService.createAccount(id, accountRequest), HttpStatus.CREATED);
 	}
 
@@ -77,7 +87,8 @@ public class AccountController {
 			@ApiParam(value = "Id for the account", required = true) @PathVariable String id,
 			@RequestBody AccountRequest accountRequest)
 			throws AccountAlreadyExistControllerException, AccountNotFoundControllerException {
-		return new ResponseEntity<>(accountControllerService.updateAccount(id, accountRequest), HttpStatus.valueOf(204));
+		return new ResponseEntity<>(accountControllerService.updateAccount(id, accountRequest),
+				HttpStatus.valueOf(204));
 	}
 
 	@DeleteMapping(ControllerConstants.SLASH_ID)
