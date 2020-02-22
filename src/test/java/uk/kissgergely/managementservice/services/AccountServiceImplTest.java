@@ -108,11 +108,11 @@ class AccountServiceImplTest {
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
 		.thenReturn(Optional.of(savedAccountEntity1));
 		
-		when(accountRepoMock.findByName(TestContstants.TEST_NAME_ALREADY_EXIST))
+		when(accountRepoMock.findByName(TestContstants.TEST_NAME_1))
 		.thenReturn(Optional.of(savedAccountEntity1));
-		savedAccountEntity1.setName(TestContstants.TEST_NAME_ALREADY_EXIST);
+		accountEntity1.setHostReference(TestContstants.TEST_HOST_REFERENCE_2);
 		Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
-			accountService.updateAccount(savedAccountEntity1);
+			accountService.updateAccount(accountEntity1);
 		});
 		assertEquals(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME,
 				exception.getMessage());

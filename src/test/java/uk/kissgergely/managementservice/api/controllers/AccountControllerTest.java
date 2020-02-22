@@ -47,8 +47,6 @@ class AccountControllerTest {
 	@InjectMocks
 	private AccountController accountController;
 
-	@Mock
-	private AccountControllerService accountControllerService;
 	
 	@Mock
 	private AccountService accountService;;
@@ -72,12 +70,15 @@ class AccountControllerTest {
 	@Test
 	void getAll() throws Exception {
 		List<AccountEntity> accountList = new ArrayList<>();
-		accountList.add(new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1));
+		accountList.add(new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1, TestContstants.TEST_HOST_REFERENCE_1));
+		List<AccountResponse> accountResponseList = new ArrayList<>();
+		accountResponseList.add(new AccountResponse(TestContstants.TEST_HOST_REFERENCE_1,TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1));
+		
 		when(accountService.getAllAccounts()).thenReturn(accountList);
 
 		this.mockMvc.perform(get(URL).characterEncoding("UTF-8")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON))
-				.andExpect(content().string(TestUntils.asJsonString(accountList)));
+				.andExpect(content().string(TestUntils.asJsonString(accountResponseList)));
 	}
 
 /*	@Test

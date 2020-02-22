@@ -17,5 +17,9 @@ public class AccountDTO {
 	public static AccountEntity transferRequestToEntity(AccountRequest accountRequest) {
 		return new AccountEntity(accountRequest.getAccountName(), accountRequest.getAccountDescription());
 	}
+	
+	public static AccountEntity transferRequestToEntity(String id, AccountRequest accountRequest) {
+		return new AccountEntity(accountRequest.getAccountName(), accountRequest.getAccountDescription(), id);
+	}
 
 }

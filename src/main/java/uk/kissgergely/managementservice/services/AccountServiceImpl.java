@@ -62,8 +62,9 @@ public class AccountServiceImpl implements AccountService {
 			throws AccountNotFoundException, AccountAlreadyExistException {
 		LOG.info("updateAccount: called with {}", accountEntity);
 		AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
-		if (accountRepo.findByName(accountEntity.getName()).isPresent()
-				&& !originalAccount.getName().equals(accountEntity.getHostReference())) {
+		Optional<AccountEntity> check = accountRepo.findByName(accountEntity.getName());
+		if (check.isPresent()
+				&& !originalAccount.getHostReference().equals(check.get().getHostReference())) {
 			throw new AccountAlreadyExistException(
 					ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
 		}
