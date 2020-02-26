@@ -45,12 +45,12 @@ class AccountEntityTest {
     @Test
     public void contructorGetSet() {
 	AccountEntity accountEntity = new AccountEntity();
-	assertEquals(accountEntity.getDeleted(), false);
+	assertEquals( false, accountEntity.getDeleted());
 
 	accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1);
 	assertEquals(TestContstants.TEST_NAME_1, accountEntity.getName());
 	assertEquals(TestContstants.TEST_DESCRIPTION_1, accountEntity.getDescription());
-	assertEquals(accountEntity.getDeleted(), false);
+	assertEquals(false, accountEntity.getDeleted());
 
 	accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1,
 		TestContstants.TEST_HOST_REFERENCE_1);

@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,12 +30,7 @@ class AccountServiceImplTest {
 	AccountRepository accountRepoMock;
 
 	AccountEntity accountEntity1;
-	AccountEntity accountEntity2;
-	AccountEntity accountEntityToSave;
-
 	AccountEntity savedAccountEntity1;
-	AccountEntity savedAccountEntityDelted;
-
 	List<AccountEntity> savedAccountEntityList;
 
 	@BeforeEach
@@ -78,12 +72,12 @@ class AccountServiceImplTest {
 	void testGetAccount() throws AccountNotFoundException {
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
 		.thenReturn(Optional.of(savedAccountEntity1));
-		assertEquals(accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1), savedAccountEntity1);
+		assertEquals(accountService.getAccount(TestContstants.TEST_HOST_REFERENCE_1), Optional.of(savedAccountEntity1));
 	}
 
 	@Test
 	void testGetAccountThrowException() {
-		when(accountRepoMock.findByName(TestContstants.TEST_NAME_NOT_FOUND))
+		when(accountRepoMock.findByNameAndDeletedFalse(TestContstants.TEST_NAME_NOT_FOUND))
 		.thenReturn(Optional.of(savedAccountEntity1));
 		Exception exception = assertThrows(AccountNotFoundException.class, () -> {
 			accountService.getAccount(TestContstants.TEST_NAME_NOT_FOUND);
@@ -98,30 +92,15 @@ class AccountServiceImplTest {
 	
 		savedAccountEntity1.setName(TestContstants.TEST_NAME_1 + "UPDATE");
 		savedAccountEntity1.setDescription(TestContstants.TEST_DESCRIPTION_1 + "UPDATE");
-		AccountEntity account = accountService.updateAccount(savedAccountEntity1);
+		AccountEntity account = accountService.updateAccount(savedAccountEntity1).orElse(null);
 		assertEquals(TestContstants.TEST_NAME_1 + "UPDATE", account.getName());
 		assertEquals(TestContstants.TEST_DESCRIPTION_1 + "UPDATE", account.getDescription());
 	}
 
 	@Test
-	void testUpdateAccountThrowsException() {
-		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
-		.thenReturn(Optional.of(savedAccountEntity1));
-		
-		when(accountRepoMock.findByName(TestContstants.TEST_NAME_1))
-		.thenReturn(Optional.of(savedAccountEntity1));
-		accountEntity1.setHostReference(TestContstants.TEST_HOST_REFERENCE_2);
-		Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {
-			accountService.updateAccount(accountEntity1);
-		});
-		assertEquals(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME,
-				exception.getMessage());
-	}
-
-	@Test
 	void testSaveAccount() throws AccountAlreadyExistException {
 		when(accountRepoMock.save(savedAccountEntity1)).thenReturn(savedAccountEntity1);
-		AccountEntity account = accountService.saveAccount(accountEntity1);
+		AccountEntity account = accountService.saveAccount(accountEntity1).orElse(null);
 		assertEquals(account.getName(), savedAccountEntity1.getName());
 		assertEquals(account.getHostReference(), savedAccountEntity1.getHostReference());
 		assertEquals(account.getDeleted(), savedAccountEntity1.getDeleted());
@@ -131,7 +110,7 @@ class AccountServiceImplTest {
 
 	@Test
 	void testSaveAccountThrowException() {
-		when(accountRepoMock.findByName(TestContstants.TEST_NAME_ALREADY_EXIST))
+		when(accountRepoMock.findByNameAndDeletedFalse(TestContstants.TEST_NAME_ALREADY_EXIST))
 		.thenReturn(Optional.of(savedAccountEntity1));
 		savedAccountEntity1.setName(TestContstants.TEST_NAME_ALREADY_EXIST);
 		Exception exception = assertThrows(AccountAlreadyExistException.class, () -> {

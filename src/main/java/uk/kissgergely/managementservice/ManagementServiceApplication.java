@@ -29,7 +29,8 @@ public class ManagementServiceApplication {
 	}
 
 	private Predicate<String> paths() {
-		return regex(ControllerConstants.API_ROOT + ControllerConstants.REGEX_ALL);
+		return regex(ControllerConstants.API_ROOT +
+				ControllerConstants.REGEX_ALL);
 	}
 
 	private Contact getContactDetails() {

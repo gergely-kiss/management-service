@@ -1,19 +1,5 @@
 package uk.kissgergely.managementservice.api.controllers;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.eq;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -21,23 +7,25 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-
-import uk.kissgergely.managementservice.api.exceptions.AccountAlreadyExistControllerException;
-import uk.kissgergely.managementservice.api.exceptions.AccountNotFoundControllerException;
 import uk.kissgergely.managementservice.api.resources.ControllerConstants;
-import uk.kissgergely.managementservice.api.resources.ControllerResponseConstants;
-import uk.kissgergely.managementservice.api.services.AccountControllerService;
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.unittesttools.TestContstants;
 import uk.kissgergely.managementservice.unittesttools.TestUntils;
 import uk.kissgergely.managementservice.vos.AccountRequest;
 import uk.kissgergely.managementservice.vos.AccountResponse;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 @AutoConfigureMockMvc
 @SpringBootTest
 class AccountControllerTest {

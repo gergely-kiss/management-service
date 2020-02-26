@@ -70,9 +70,9 @@ class AccountRepositoryTest {
 
     @Test
     void findByName() {
-	assertTrue((reporsitory.findByName(TestContstants.TEST_NAME_1).isPresent()
-		&& reporsitory.findByName(TestContstants.TEST_NAME_1).get().getDescription()
+	assertTrue((reporsitory.findByNameAndDeletedFalse(TestContstants.TEST_NAME_1).isPresent()
+		&& reporsitory.findByNameAndDeletedFalse(TestContstants.TEST_NAME_1).get().getDescription()
 			.equals(TestContstants.TEST_DESCRIPTION_1)
-		&& reporsitory.findByName(TestContstants.TEST_NAME_1).get().getId() == accountEntitySaved.getId()));
+		&& reporsitory.findByNameAndDeletedFalse(TestContstants.TEST_NAME_1).get().getId() == accountEntitySaved.getId()));
     }
 }
