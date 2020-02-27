@@ -10,15 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import org.springframework.web.server.ResponseStatusException;
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.data.repositories.AccountRepository;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
 import uk.kissgergely.managementservice.services.exceptions.ServiceExceptionConstants;
-import uk.kissgergely.managementservice.services.resources.ServiceConstants;
-
-import javax.sql.rowset.serial.SerialException;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -37,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public List<AccountEntity> getAllAccounts() {
-        return new ArrayList<>(accountRepo.findByDeletedFalse());
+        return new ArrayList<>(accountRepo.findAllByDeletedFalse());
     }
 
     /**

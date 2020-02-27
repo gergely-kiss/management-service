@@ -58,13 +58,13 @@ class AccountServiceImplTest {
 	void testGetAllAccounts() {
 		savedAccountEntityList = new ArrayList<AccountEntity>();
 		savedAccountEntityList.add(savedAccountEntity1);
-		when(accountRepoMock.findByDeletedFalse()).thenReturn(savedAccountEntityList);
+		when(accountRepoMock.findAllByDeletedFalse()).thenReturn(savedAccountEntityList);
 		assertEquals(savedAccountEntityList, accountService.getAllAccounts());
 	}
 
 	@Test
 	void testGetAllEmptyList() {
-		when(accountRepoMock.findByDeletedFalse()).thenReturn(new ArrayList<AccountEntity>());
+		when(accountRepoMock.findAllByDeletedFalse()).thenReturn(new ArrayList<AccountEntity>());
 		assertEquals(new ArrayList<AccountEntity>(), accountService.getAllAccounts());
 	}
 

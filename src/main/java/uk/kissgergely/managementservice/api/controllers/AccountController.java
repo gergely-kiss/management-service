@@ -36,94 +36,96 @@ import uk.kissgergely.managementservice.vos.AccountResponse;
 @RequestMapping(ControllerConstants.API_ROOT + ControllerConstants.ACCOUNT_PATH)
 public class AccountController {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AccountController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AccountController.class);
 
-	AccountService accountService;
+    AccountService accountService;
 
-	@Autowired
-	public AccountController(AccountService accountService) {
-		this.accountService = accountService;
-	}
+    @Autowired
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
-	@GetMapping
-	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.NO_ACCOUNT_FOUND) })
-	public ResponseEntity<List<AccountResponse>> getAccountList() {
-		return new ResponseEntity<>(accountService.getAllAccounts().stream().map(AccountDTO::transferEntityToResponse)
-				.collect(Collectors.toList()), HttpStatus.OK);
-	}
+    @GetMapping
+    @ApiResponses(value = {@ApiResponse(code = 404, message = ControllerResponseConstants.NO_ACCOUNT_FOUND)})
+    public ResponseEntity<List<AccountResponse>> getAccountList() {
+        return new ResponseEntity<>(accountService.getAllAccounts().stream().map(AccountDTO::transferEntityToResponse)
+                .collect(Collectors.toList()), HttpStatus.OK);
+    }
 
-	@GetMapping(ControllerConstants.SLASH_ID)
-	@ApiResponses(value = { @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND) })
-	public ResponseEntity<AccountResponse> getAccount(
-			@ApiParam(value = "Id for the account", required = true) @PathVariable String id)
-			throws ResponseStatusException {
-		try {
-			return new ResponseEntity<>(AccountDTO.transferEntityToResponse(accountService.getAccount(id).orElseThrow(null)),
-					HttpStatus.OK);
-		} catch (AccountNotFoundException e) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-					ControllerResponseConstants.ACCOUNT_NOT_FOUND);
-		}
-	}
+    @GetMapping(ControllerConstants.SLASH_ID)
+    @ApiResponses(value = {@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND)})
+    public ResponseEntity<AccountResponse> getAccount(
+            @ApiParam(value = "Id for the account", required = true) @PathVariable String id)
+            throws ResponseStatusException {
+        try {
+            return new ResponseEntity<>(AccountDTO.transferEntityToResponse(accountService.getAccount(id).
+                    orElseThrow(null)), HttpStatus.OK);
+        } catch (AccountNotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+        }
+    }
 
-	@PostMapping(ControllerConstants.SLASH_ID)
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	@ApiResponses(value = { @ApiResponse(code = 201, message = ControllerResponseConstants.CREATED),
-			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
-	public ResponseEntity<AccountResponse> addAccount(@RequestBody AccountRequest accountRequest)
-			throws ResponseStatusException {
-		try {
-			return new ResponseEntity<>(
-					AccountDTO.transferEntityToResponse(
-							accountService.saveAccount(AccountDTO.transferRequestToEntity(accountRequest)).orElseThrow(null)),
-					HttpStatus.CREATED);
-		} catch (AccountAlreadyExistException e) {
-			throw new ResponseStatusException(HttpStatus.CONFLICT,
-					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST);
-		}
-	}
+    @PostMapping(ControllerConstants.SLASH_ID)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @ApiResponses(value = {@ApiResponse(code = 201, message = ControllerResponseConstants.CREATED),
+            @ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST)})
+    public ResponseEntity<AccountResponse> addAccount(@RequestBody AccountRequest accountRequest)
+            throws ResponseStatusException {
+        try {
+            return new ResponseEntity<>(
+                    AccountDTO.transferEntityToResponse(
+                            accountService.saveAccount(AccountDTO.transferRequestToEntity(accountRequest))
+                                    .orElseThrow(null)),
+                    HttpStatus.CREATED);
+        } catch (AccountAlreadyExistException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    ControllerResponseConstants.ACCOUNT_ALREADY_EXIST);
+        }
+    }
 
-	@PutMapping(ControllerConstants.SLASH_ID)
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	@ApiResponses(value = {
-			@ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_UPDATED_SUCCESSFULLY),
-			@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND),
-			@ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST) })
-	public ResponseEntity<AccountResponse> updateAccount(
-			@ApiParam(value = "Id for the account", required = true) @PathVariable String id,
-			@RequestBody AccountRequest accountRequest)
-			throws Exception {
-		try {
-			return new ResponseEntity<>(
-					AccountDTO.transferEntityToResponse(
-							accountService.updateAccount(AccountDTO.transferRequestToEntity(id, accountRequest)).orElseThrow(null)),
-					HttpStatus.valueOf(204));
-		} catch (AccountNotFoundException e) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-					ControllerResponseConstants.ACCOUNT_NOT_FOUND);
-		} catch (AccountAlreadyExistException e) {
-			throw new ResponseStatusException(HttpStatus.CONFLICT,
-					ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
-		}
-	}
+    @PutMapping(ControllerConstants.SLASH_ID)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @ApiResponses(value = {
+            @ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_UPDATED_SUCCESSFULLY),
+            @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND),
+            @ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST)})
+    public ResponseEntity<AccountResponse> updateAccount(
+            @ApiParam(value = "Id for the account", required = true) @PathVariable String id,
+            @RequestBody AccountRequest accountRequest)
+            throws Exception {
+        try {
+            return new ResponseEntity<>(
+                    AccountDTO.transferEntityToResponse(
+                            accountService.updateAccount(AccountDTO.transferRequestToEntity(id, accountRequest))
+                                    .orElseThrow(null)),
+                    HttpStatus.valueOf(204));
+        } catch (AccountNotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+        } catch (AccountAlreadyExistException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    ControllerResponseConstants.ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
+        }
+    }
 
-	@DeleteMapping(ControllerConstants.SLASH_ID)
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	@ApiResponses(value = {
-			@ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY),
-			@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND) })
-	public ResponseEntity<String> deletAccount(
+    @DeleteMapping(ControllerConstants.SLASH_ID)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @ApiResponses(value = {
+            @ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY),
+            @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND)})
+    public ResponseEntity<String> deletAccount(
 
-			@ApiParam(value = "Id for the account", required = true) @PathVariable String id)
-			throws ResponseStatusException {
-		LOG.info("{}", id);
-		try {
-			accountService.deleteAccount(id);
-			return new ResponseEntity<>(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID, HttpStatus.OK);
-		} catch (AccountNotFoundException e) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-					ControllerResponseConstants.ACCOUNT_NOT_FOUND);
-		}
-	}
+            @ApiParam(value = "Id for the account", required = true) @PathVariable String id)
+            throws ResponseStatusException {
+        LOG.info("{}", id);
+        try {
+            accountService.deleteAccount(id);
+            return new ResponseEntity<>(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID, HttpStatus.OK);
+        } catch (AccountNotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    ControllerResponseConstants.ACCOUNT_NOT_FOUND);
+        }
+    }
 
 }
