@@ -10,12 +10,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.web.server.ResponseStatusException;
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.data.repositories.AccountRepository;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
 import uk.kissgergely.managementservice.services.exceptions.ServiceExceptionConstants;
 import uk.kissgergely.managementservice.services.resources.ServiceConstants;
+
+import javax.sql.rowset.serial.SerialException;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -34,7 +37,7 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public List<AccountEntity> getAllAccounts() {
-		return new ArrayList<>(accountRepo.findByDeletedFalse());
+        return new ArrayList<>(accountRepo.findByDeletedFalse());
     }
 
     /**
@@ -42,9 +45,9 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public Optional<AccountEntity> getAccount(String hostReference) throws AccountNotFoundException {
-        Optional<AccountEntity> accountEntityOptional = accountRepo.findByHostReferenceAndDeletedFalse(hostReference);
-        if (accountEntityOptional.isPresent()) return accountEntityOptional;
-        else throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID);
+        return Optional.of(accountRepo.findByHostReferenceAndDeletedFalse(hostReference).orElseThrow(
+                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID)));
+
 
     }
 
@@ -54,19 +57,14 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Optional<AccountEntity> updateAccount(AccountEntity accountEntity)
             throws AccountNotFoundException, AccountAlreadyExistException {
-        AccountEntity originalAccount = getAccount(accountEntity.getHostReference()).orElseThrow(null);
-        Optional<AccountEntity> check = accountRepo.findByNameAndDeletedFalse(accountEntity.getName());
-        if (check.isPresent()
-                && !originalAccount.getHostReference().equals(check.get().getHostReference())) {
-            throw new AccountAlreadyExistException(
-                    ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
-        }
+        AccountEntity originalAccount = getAccount(accountEntity.getHostReference()).orElseThrow(
+                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
+        validateIfAlreadyExistWithTheSameName(accountEntity.getName());
+
         originalAccount.setName(accountEntity.getName());
         originalAccount.setDescription(accountEntity.getDescription());
-        originalAccount.setHostReference(accountEntity.getHostReference());
-        originalAccount.setDeleted(accountEntity.getDeleted());
-        accountRepo.save(originalAccount);
-        return Optional.of(originalAccount);
+
+        return Optional.of(accountRepo.save(originalAccount));
     }
 
     /**
@@ -75,28 +73,37 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Optional<AccountEntity> saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException {
         LOG.info("saveAccount: called with accountEntity {}", accountEntity);
-        if (accountRepo.findByNameAndDeletedFalse(accountEntity.getName()).isPresent()) {
-            throw new AccountAlreadyExistException(ServiceExceptionConstants.ACCOUNT_ALREADY_EXIST_WITH_THAT_NAME);
-        }
+        validateIfAlreadyExistWithTheSameName(accountEntity.getName());
         AccountEntity newAccount = new AccountEntity();
         newAccount.setName(accountEntity.getName());
         newAccount.setDescription(accountEntity.getDescription());
         newAccount.setHostReference(accountEntity.getHostReference());
-        accountRepo.save(newAccount);
-        return Optional.of(newAccount);
+
+        return Optional.of(accountRepo.save(newAccount));
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public String deleteAccount(String hostReference) throws AccountNotFoundException {
-        AccountEntity accountToDelete = getAccount(hostReference).orElseThrow(null);
-        if (accountToDelete.getDeleted()) throw new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND);
+    public Optional<AccountEntity> deleteAccount(String hostReference) throws AccountNotFoundException {
+        AccountEntity accountToDelete = validateIfAccountAlreadyExist(hostReference);
+        return Optional.of(markedAsDeleted(accountToDelete));
+    }
 
-        accountToDelete.setDeleted(true);
-        accountToDelete.setName("__________" + accountToDelete.getName() + "__________" + UUID.randomUUID().toString());
-        accountRepo.save(accountToDelete);
-        return ServiceConstants.DELETING_ACCOUNT_WAS_SUCCESSFUL;
+    private AccountEntity validateIfAccountAlreadyExist(String hostReference) throws AccountNotFoundException {
+        return getAccount(hostReference).orElseThrow(
+                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
+    }
+
+    private AccountEntity validateIfAlreadyExistWithTheSameName(String accountName) throws AccountAlreadyExistException {
+        return accountRepo.findByNameAndDeletedFalse(accountName).orElseThrow(
+                () -> new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME));
+    }
+
+    private AccountEntity markedAsDeleted(AccountEntity accountEntity) {
+        accountEntity.setDeleted(true);
+        accountEntity.setName("__________" + accountEntity.getName() + "__________" + UUID.randomUUID().toString());
+        return accountRepo.save(accountEntity);
     }
 }

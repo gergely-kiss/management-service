@@ -12,8 +12,8 @@ public interface AccountService {
 	List<AccountEntity> getAllAccounts();
 
 	Optional<AccountEntity> getAccount(String hostReference) throws AccountNotFoundException;
-	Optional<AccountEntity> updateAccount(AccountEntity accountEntity) throws AccountNotFoundException, AccountAlreadyExistException;
+	Optional<AccountEntity> updateAccount(AccountEntity accountEntity) throws Exception;
 	Optional<AccountEntity> saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException;
-	String deleteAccount(String hostReference) throws AccountNotFoundException;
+	Optional<AccountEntity> deleteAccount(String hostReference) throws AccountNotFoundException;
 
 }

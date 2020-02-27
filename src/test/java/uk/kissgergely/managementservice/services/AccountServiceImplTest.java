@@ -86,7 +86,7 @@ class AccountServiceImplTest {
 	}
 
 	@Test
-	void testUpdateAccount() throws AccountNotFoundException, AccountAlreadyExistException {
+	void testUpdateAccount() throws Exception {
 		when(accountRepoMock.findByHostReferenceAndDeletedFalse(TestContstants.TEST_HOST_REFERENCE_1))
 		.thenReturn(Optional.of(savedAccountEntity1));
 	

@@ -28,6 +28,7 @@ import uk.kissgergely.managementservice.dtos.AccountDTO;
 import uk.kissgergely.managementservice.services.AccountService;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
+import uk.kissgergely.managementservice.services.exceptions.ServiceExceptionConstants;
 import uk.kissgergely.managementservice.vos.AccountRequest;
 import uk.kissgergely.managementservice.vos.AccountResponse;
 
@@ -91,7 +92,7 @@ public class AccountController {
 	public ResponseEntity<AccountResponse> updateAccount(
 			@ApiParam(value = "Id for the account", required = true) @PathVariable String id,
 			@RequestBody AccountRequest accountRequest)
-			throws ResponseStatusException {
+			throws Exception {
 		try {
 			return new ResponseEntity<>(
 					AccountDTO.transferEntityToResponse(
@@ -117,7 +118,8 @@ public class AccountController {
 			throws ResponseStatusException {
 		LOG.info("{}", id);
 		try {
-			return new ResponseEntity<>(accountService.deleteAccount(id), HttpStatus.OK);
+			accountService.deleteAccount(id);
+			return new ResponseEntity<>(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID, HttpStatus.OK);
 		} catch (AccountNotFoundException e) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND,
 					ControllerResponseConstants.ACCOUNT_NOT_FOUND);
