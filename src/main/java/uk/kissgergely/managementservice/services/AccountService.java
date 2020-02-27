@@ -9,11 +9,41 @@ import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundExcep
 
 public interface AccountService {
 
+	/**
+	 * @return
+	 */
 	List<AccountEntity> getAllAccounts();
 
-	Optional<AccountEntity> getAccount(String hostReference) throws AccountNotFoundException;
-	Optional<AccountEntity> updateAccount(AccountEntity accountEntity) throws Exception;
-	Optional<AccountEntity> saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException;
-	Optional<AccountEntity> deleteAccount(String hostReference) throws AccountNotFoundException;
+	/**
+	 * @param hostReference
+	 * @return
+	 * @throws AccountNotFoundException
+	 */
+	Optional<AccountEntity> getAccount(String hostReference)
+			throws AccountNotFoundException;
+
+	/**
+	 * @param accountEntity
+	 * @return
+	 * @throws Exception
+	 */
+	Optional<AccountEntity> updateAccount(AccountEntity accountEntity)
+			throws AccountNotFoundException, AccountAlreadyExistException ;
+
+	/**
+	 * @param accountEntity
+	 * @return
+	 * @throws AccountAlreadyExistException
+	 */
+	Optional<AccountEntity> saveAccount(AccountEntity accountEntity)
+			throws AccountAlreadyExistException;
+
+	/**
+	 * @param hostReference
+	 * @return
+	 * @throws AccountNotFoundException
+	 */
+	Optional<AccountEntity> deleteAccount(String hostReference)
+			throws AccountNotFoundException;
 
 }
