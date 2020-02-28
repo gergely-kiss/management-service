@@ -58,8 +58,7 @@ public class AccountController {
             @ApiParam(value = "Id for the account", required = true) @PathVariable String id)
             throws ResponseStatusException {
         try {
-            return new ResponseEntity<>(AccountDTO.transferEntityToResponse(accountService.getAccount(id).
-                    orElseThrow(null)), HttpStatus.OK);
+            return new ResponseEntity<>(AccountDTO.transferEntityToResponse(accountService.getAccount(id)), HttpStatus.OK);
         } catch (AccountNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     ControllerResponseConstants.ACCOUNT_NOT_FOUND);
@@ -75,8 +74,7 @@ public class AccountController {
         try {
             return new ResponseEntity<>(
                     AccountDTO.transferEntityToResponse(
-                            accountService.saveAccount(AccountDTO.transferRequestToEntity(accountRequest))
-                                    .orElseThrow(null)),
+                            accountService.saveAccount(AccountDTO.transferRequestToEntity(accountRequest))),
                     HttpStatus.CREATED);
         } catch (AccountAlreadyExistException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT,
@@ -97,8 +95,7 @@ public class AccountController {
         try {
             return new ResponseEntity<>(
                     AccountDTO.transferEntityToResponse(
-                            accountService.updateAccount(AccountDTO.transferRequestToEntity(id, accountRequest))
-                                    .orElseThrow(null)),
+                            accountService.updateAccount(AccountDTO.transferRequestToEntity(id, accountRequest))),
                     HttpStatus.valueOf(204));
         } catch (AccountNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,

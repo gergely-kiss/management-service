@@ -19,7 +19,7 @@ public interface AccountService {
 	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	Optional<AccountEntity> getAccount(String hostReference)
+	AccountEntity getAccount(String hostReference)
 			throws AccountNotFoundException;
 
 	/**
@@ -27,7 +27,7 @@ public interface AccountService {
 	 * @return
 	 * @throws Exception
 	 */
-	Optional<AccountEntity> updateAccount(AccountEntity accountEntity)
+	AccountEntity updateAccount(AccountEntity accountEntity)
 			throws AccountNotFoundException, AccountAlreadyExistException ;
 
 	/**
@@ -35,7 +35,7 @@ public interface AccountService {
 	 * @return
 	 * @throws AccountAlreadyExistException
 	 */
-	Optional<AccountEntity> saveAccount(AccountEntity accountEntity)
+	AccountEntity saveAccount(AccountEntity accountEntity)
 			throws AccountAlreadyExistException;
 
 	/**
@@ -43,7 +43,7 @@ public interface AccountService {
 	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	Optional<AccountEntity> deleteAccount(String hostReference)
+	AccountEntity deleteAccount(String hostReference)
 			throws AccountNotFoundException;
 
 }

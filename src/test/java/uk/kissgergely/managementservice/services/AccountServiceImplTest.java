@@ -92,7 +92,7 @@ class AccountServiceImplTest {
 	
 		savedAccountEntity1.setName(TestContstants.TEST_NAME_1 + "UPDATE");
 		savedAccountEntity1.setDescription(TestContstants.TEST_DESCRIPTION_1 + "UPDATE");
-		AccountEntity account = accountService.updateAccount(savedAccountEntity1).orElse(null);
+		AccountEntity account = accountService.updateAccount(savedAccountEntity1);
 		assertEquals(TestContstants.TEST_NAME_1 + "UPDATE", account.getName());
 		assertEquals(TestContstants.TEST_DESCRIPTION_1 + "UPDATE", account.getDescription());
 	}
@@ -100,7 +100,7 @@ class AccountServiceImplTest {
 	@Test
 	void testSaveAccount() throws AccountAlreadyExistException {
 		when(accountRepoMock.save(savedAccountEntity1)).thenReturn(savedAccountEntity1);
-		AccountEntity account = accountService.saveAccount(accountEntity1).orElse(null);
+		AccountEntity account = accountService.saveAccount(accountEntity1);
 		assertEquals(account.getName(), savedAccountEntity1.getName());
 		assertEquals(account.getHostReference(), savedAccountEntity1.getHostReference());
 		assertEquals(account.getDeleted(), savedAccountEntity1.getDeleted());

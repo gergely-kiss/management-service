@@ -40,61 +40,54 @@ public class AccountServiceImpl implements AccountService {
      * {@inheritDoc}
      */
     @Override
-    public Optional<AccountEntity> getAccount(String hostReference) throws AccountNotFoundException {
-        return Optional.of(accountRepo.findByHostReferenceAndDeletedFalse(hostReference).orElseThrow(
-                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID)));
-
-
+    public AccountEntity getAccount(String hostReference) throws AccountNotFoundException {
+        return accountRepo.findByHostReferenceAndDeletedFalse(hostReference).orElseThrow(
+                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Optional<AccountEntity> updateAccount(AccountEntity accountEntity)
+    public AccountEntity updateAccount(AccountEntity accountEntity)
             throws AccountNotFoundException, AccountAlreadyExistException {
-        AccountEntity originalAccount = getAccount(accountEntity.getHostReference()).orElseThrow(
-                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
-        validateIfAlreadyExistWithTheSameName(accountEntity.getName());
-
-        originalAccount.setName(accountEntity.getName());
-        originalAccount.setDescription(accountEntity.getDescription());
-
-        return Optional.of(accountRepo.save(originalAccount));
+        AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
+        validateIfAlreadyExistWithTheSameName(accountEntity);
+        if(!originalAccount.getName().equals(accountEntity.getName()))
+            originalAccount.setName(accountEntity.getName());
+        if(!originalAccount.getDescription().equals(accountEntity.getDescription()))
+            originalAccount.setDescription(accountEntity.getDescription());
+        return accountRepo.save(originalAccount);
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Optional<AccountEntity> saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException {
-        LOG.info("saveAccount: called with accountEntity {}", accountEntity);
-        validateIfAlreadyExistWithTheSameName(accountEntity.getName());
-        AccountEntity newAccount = new AccountEntity();
-        newAccount.setName(accountEntity.getName());
-        newAccount.setDescription(accountEntity.getDescription());
-        newAccount.setHostReference(accountEntity.getHostReference());
-
-        return Optional.of(accountRepo.save(newAccount));
+    public AccountEntity saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException {
+        validateIfAlreadyExistWithTheSameName(accountEntity);
+        return accountRepo.save(new AccountEntity(accountEntity.getName(), accountEntity.getDescription()));
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Optional<AccountEntity> deleteAccount(String hostReference) throws AccountNotFoundException {
-        AccountEntity accountToDelete = validateIfAccountAlreadyExist(hostReference);
-        return Optional.of(markedAsDeleted(accountToDelete));
+    public AccountEntity deleteAccount(String hostReference) throws AccountNotFoundException {
+        return markedAsDeleted(getAccount(hostReference));
     }
 
-    private AccountEntity validateIfAccountAlreadyExist(String hostReference) throws AccountNotFoundException {
-        return getAccount(hostReference).orElseThrow(
-                () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
-    }
 
-    private AccountEntity validateIfAlreadyExistWithTheSameName(String accountName) throws AccountAlreadyExistException {
-        return accountRepo.findByNameAndDeletedFalse(accountName).orElseThrow(
-                () -> new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME));
+    private void validateIfAlreadyExistWithTheSameName(AccountEntity accountEntity) throws AccountAlreadyExistException {
+        Optional<AccountEntity> accountEntityOptional = accountRepo.findByNameAndDeletedFalse(accountEntity.getName());
+        if(accountEntityOptional.isPresent()){
+            if(accountEntity.getHostReference() == null){
+                throw new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
+            }
+            if(!accountEntity.getHostReference().equals(accountEntityOptional.get().getHostReference())){
+                throw new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
+            }
+        }
     }
 
     private AccountEntity markedAsDeleted(AccountEntity accountEntity) {
