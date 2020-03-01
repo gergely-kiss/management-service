@@ -14,6 +14,7 @@ public class JpaConstants {
     public static final String DELETED = "deleted";
     public static final String DELETED_PREFIX = "deleted_prefix";
 
+    public static final Double BALANCE_DEFAULT = 0D;
     public static final boolean DELETED_DEFAULT = false;
 
     public static final String TAG = "tag";

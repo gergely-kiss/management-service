@@ -31,14 +31,14 @@ public class AccountEntity {
 	private Set<TagEntity> tagEntitySet;
 
 	public AccountEntity() {
-		this.balance = 0D;
+		this.balance = JpaConstants.BALANCE_DEFAULT;
 		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
 	public AccountEntity(String name, String description) {
 		this.name = name;
 		this.description = description;
-		this.balance = 0D;
+		this.balance = JpaConstants.BALANCE_DEFAULT;
 		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
@@ -46,7 +46,7 @@ public class AccountEntity {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.balance = 0D;
+		this.balance = JpaConstants.BALANCE_DEFAULT;
 		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
@@ -54,7 +54,7 @@ public class AccountEntity {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.balance = balance == null ? 0D : balance;
+		this.balance = balance == null ? JpaConstants.BALANCE_DEFAULT : balance;
 		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}
 
@@ -62,7 +62,7 @@ public class AccountEntity {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.balance = balance == null ? 0D : balance;
+		this.balance = balance == null ? JpaConstants.BALANCE_DEFAULT : balance;
 		this.tagEntitySet = tagEntitySet;
 		this.deleted = JpaConstants.DELETED_DEFAULT;
 	}

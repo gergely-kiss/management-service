@@ -77,6 +77,25 @@ class AccountEntityTest {
     }
 
     @Test
+    public void settersAndGetters(){
+        AccountEntity accountEntity = new AccountEntity();
+
+        accountEntity.setId(TestContstants.TEST_ID);
+        assertEquals(TestContstants.TEST_ID, accountEntity.getId());
+        accountEntity.setName(TestContstants.TEST_NAME);
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        accountEntity.setDescription(TestContstants.TEST_DESCRIPTION);
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        accountEntity.setBalance(TestContstants.TEST_BALANCE);
+        assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
+        accountEntity.setDeleted(TestContstants.TEST_DELETED);
+        assertEquals(TestContstants.TEST_DELETED, accountEntity.getDeleted());
+        accountEntity.setTagEntitySet(TestContstants.TEST_TAG_SET);
+        assertEquals(TestContstants.TEST_TAG_SET, accountEntity.getTagEntitySet());
+
+    }
+
+    @Test
     public void toStringTest() {
     }
 
