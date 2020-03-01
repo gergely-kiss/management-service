@@ -18,12 +18,12 @@ class AccountEntityTest {
 
     @Test
     public void fieldAnnotations() {
-        AssertAnnotations.assertField(AccountEntity.class, TestContstants.ID, Id.class, GeneratedValue.class,
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.ID, Id.class, GeneratedValue.class,
                 Column.class);
-        AssertAnnotations.assertField(AccountEntity.class, TestContstants.NAME, Column.class);
-        AssertAnnotations.assertField(AccountEntity.class, TestContstants.DESCRIPTION, Column.class);
-        AssertAnnotations.assertField(AccountEntity.class, TestContstants.DELETED, Column.class);
-        AssertAnnotations.assertField(AccountEntity.class, TestContstants.BALANCE, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.NAME, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.DESCRIPTION, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.DELETED, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.BALANCE, Column.class);
     }
 
     @Test
@@ -41,21 +41,21 @@ class AccountEntityTest {
     @Test
     public void constructor() {
         AccountEntity accountEntity = new AccountEntity();
-        assertEquals(false, accountEntity.getDeleted());
-        assertEquals(0, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
 
         accountEntity = new AccountEntity(TestContstants.TEST_NAME, TestContstants.TEST_DESCRIPTION);
         assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
         assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
-        assertEquals(0, accountEntity.getBalance());
-        assertEquals(false, accountEntity.getDeleted());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
 
         accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME, TestContstants.TEST_DESCRIPTION);
         assertEquals(TestContstants.TEST_ID, accountEntity.getId());
         assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
         assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
-        assertEquals(0, accountEntity.getBalance());
-        assertEquals(false, accountEntity.getDeleted());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
 
         accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME,
                 TestContstants.TEST_DESCRIPTION, TestContstants.TEST_BALANCE);
@@ -63,7 +63,7 @@ class AccountEntityTest {
         assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
         assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
         assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
-        assertEquals(false, accountEntity.getDeleted());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
 
         accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME,
                 TestContstants.TEST_DESCRIPTION, TestContstants.TEST_BALANCE, TestContstants.TEST_TAG_SET);
@@ -73,7 +73,7 @@ class AccountEntityTest {
         assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
         assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
         assertEquals(TestContstants.TEST_TAG_SET, accountEntity.getTagEntitySet());
-        assertEquals(false, accountEntity.getDeleted());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
     }
 
     @Test
@@ -92,7 +92,6 @@ class AccountEntityTest {
         assertEquals(TestContstants.TEST_DELETED, accountEntity.getDeleted());
         accountEntity.setTagEntitySet(TestContstants.TEST_TAG_SET);
         assertEquals(TestContstants.TEST_TAG_SET, accountEntity.getTagEntitySet());
-
     }
 
     @Test

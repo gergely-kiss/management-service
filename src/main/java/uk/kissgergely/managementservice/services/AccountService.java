@@ -1,8 +1,6 @@
 package uk.kissgergely.managementservice.services;
 
 import java.util.List;
-import java.util.Optional;
-
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
