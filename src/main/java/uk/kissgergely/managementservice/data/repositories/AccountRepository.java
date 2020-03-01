@@ -17,7 +17,7 @@ public interface AccountRepository extends CrudRepository<AccountEntity, Integer
 	 * @param id
 	 * @return Optional<AccountEntity> were the deleted flag is set to false
 	 */
-    Optional<AccountEntity> findByHostReferenceAndDeletedFalse(String id);
+    Optional<AccountEntity> findByIdAndDeletedFalse(Integer id);
 
 
 	/**

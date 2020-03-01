@@ -15,11 +15,11 @@ public interface AccountService {
 	List<AccountEntity> getAllAccounts();
 
 	/**
-	 * @param hostReference
+	 * @param id
 	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	AccountEntity getAccount(String hostReference)
+	AccountEntity getAccount(Integer id)
 			throws AccountNotFoundException;
 
 	/**
@@ -39,11 +39,11 @@ public interface AccountService {
 			throws AccountAlreadyExistException;
 
 	/**
-	 * @param hostReference
+	 * @param id
 	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	AccountEntity deleteAccount(String hostReference)
+	AccountEntity deleteAccount(Integer id)
 			throws AccountNotFoundException;
 
 }

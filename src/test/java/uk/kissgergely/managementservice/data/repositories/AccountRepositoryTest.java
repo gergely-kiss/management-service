@@ -18,10 +18,7 @@ class AccountRepositoryTest {
 
     private AccountRepository accountRepository;
     private AccountEntity accountEntity;
-    private AccountEntity accountEntityDeleted;
     private AccountEntity accountEntitySaved;
-    private AccountEntity accountEntityDeletedSaved;
-
     @Autowired
     AccountRepositoryTest(AccountRepository repository) {
         this.accountRepository = repository;
@@ -33,37 +30,25 @@ class AccountRepositoryTest {
     }
 
     @Test
-    void findByHostReferenceAndDeletedFalse() {
-        accountEntityDeleted = new AccountEntity(TestContstants.TEST_NAME_FOR_DELETE,
-                TestContstants.TEST_DESCRIPTION_1);
-        accountEntityDeleted.setDeleted(true);
-        accountEntityDeletedSaved = accountRepository.save(accountEntityDeleted);
-        accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1);
-        accountRepository.save(accountEntity);
-        assertTrue(accountRepository.findByHostReferenceAndDeletedFalse(accountEntitySaved.getHostReference()).isPresent());
-        assertFalse(accountRepository.findByHostReferenceAndDeletedFalse(accountEntityDeletedSaved.getHostReference())
-                .isPresent());
+    void findByIdAndDeletedFalse() {
+        accountEntity = new AccountEntity(TestContstants.TEST_NAME, TestContstants.TEST_DESCRIPTION);
+
+        accountEntity.setDeleted(true);
+        accountEntitySaved = accountRepository.save(accountEntity);
+        assertFalse(accountRepository.findByIdAndDeletedFalse(accountEntitySaved.getId()).isPresent());
+
+        accountEntity.setDeleted(false);
+        accountEntitySaved = accountRepository.save(accountEntity);
+        assertTrue(accountRepository.findByIdAndDeletedFalse(accountEntitySaved.getId()).isPresent());
     }
 
     @Test
     void findAllByDeletedFalse() {
-        accountEntityDeleted = new AccountEntity(TestContstants.TEST_NAME_FOR_DELETE,
-                TestContstants.TEST_DESCRIPTION_1);
-        accountEntityDeleted.setDeleted(true);
-        accountEntityDeletedSaved = accountRepository.save(accountEntityDeleted);
-        assertTrue(((List<?>) accountRepository.findAll()).size() >
-                ((List<?>) accountRepository.findAllByDeletedFalse()).size());
+
     }
 
     @Test
     void findByNameAndDeletedFalse() {
-        accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1);
-        accountRepository.save(accountEntity);
-        accountEntityDeleted = new AccountEntity(TestContstants.TEST_NAME_FOR_DELETE,
-                TestContstants.TEST_DESCRIPTION_1);
-        accountEntityDeleted.setDeleted(true);
 
-        assertTrue(accountRepository.findByNameAndDeletedFalse(TestContstants.TEST_NAME_1).isPresent());
-        assertFalse(accountRepository.findByNameAndDeletedFalse(TestContstants.TEST_NAME_FOR_DELETE).isPresent());
     }
 }

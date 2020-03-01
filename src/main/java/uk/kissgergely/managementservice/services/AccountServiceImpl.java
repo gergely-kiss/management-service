@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
+import uk.kissgergely.managementservice.data.entities.JpaConstants;
 import uk.kissgergely.managementservice.data.repositories.AccountRepository;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
@@ -40,8 +41,8 @@ public class AccountServiceImpl implements AccountService {
      * {@inheritDoc}
      */
     @Override
-    public AccountEntity getAccount(String hostReference) throws AccountNotFoundException {
-        return accountRepo.findByHostReferenceAndDeletedFalse(hostReference).orElseThrow(
+    public AccountEntity getAccount(Integer id) throws AccountNotFoundException {
+        return accountRepo.findByIdAndDeletedFalse(id).orElseThrow(
                 () -> new AccountNotFoundException(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID));
     }
 
@@ -51,12 +52,14 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public AccountEntity updateAccount(AccountEntity accountEntity)
             throws AccountNotFoundException, AccountAlreadyExistException {
-        AccountEntity originalAccount = getAccount(accountEntity.getHostReference());
+        AccountEntity originalAccount = getAccount(accountEntity.getId());
         validateIfAlreadyExistWithTheSameName(accountEntity);
         if(!originalAccount.getName().equals(accountEntity.getName()))
             originalAccount.setName(accountEntity.getName());
         if(!originalAccount.getDescription().equals(accountEntity.getDescription()))
             originalAccount.setDescription(accountEntity.getDescription());
+        if(!originalAccount.getTagEntitySet().equals(accountEntity.getTagEntitySet()))
+            originalAccount.setTagEntitySet(accountEntity.getTagEntitySet());
         return accountRepo.save(originalAccount);
     }
 
@@ -73,18 +76,18 @@ public class AccountServiceImpl implements AccountService {
      * {@inheritDoc}
      */
     @Override
-    public AccountEntity deleteAccount(String hostReference) throws AccountNotFoundException {
-        return markedAsDeleted(getAccount(hostReference));
+    public AccountEntity deleteAccount(Integer id) throws AccountNotFoundException {
+        return markedAsDeleted(getAccount(id));
     }
 
 
     private void validateIfAlreadyExistWithTheSameName(AccountEntity accountEntity) throws AccountAlreadyExistException {
         Optional<AccountEntity> accountEntityOptional = accountRepo.findByNameAndDeletedFalse(accountEntity.getName());
         if(accountEntityOptional.isPresent()){
-            if(accountEntity.getHostReference() == null){
+            if(accountEntity.getId() == null){
                 throw new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
             }
-            if(!accountEntity.getHostReference().equals(accountEntityOptional.get().getHostReference())){
+            if(!accountEntity.getId().equals(accountEntityOptional.get().getId())){
                 throw new AccountAlreadyExistException(ServiceExceptionConstants.DIFFERENT_ACCOUNT_ALREADY_EXIST_WITH_THE_SAME_NAME);
             }
         }
@@ -92,7 +95,7 @@ public class AccountServiceImpl implements AccountService {
 
     private AccountEntity markedAsDeleted(AccountEntity accountEntity) {
         accountEntity.setDeleted(true);
-        accountEntity.setName("__________" + accountEntity.getName() + "__________" + UUID.randomUUID().toString());
+        accountEntity.setName(JpaConstants.DELETED_PREFIX + accountEntity.getName() + UUID.randomUUID().toString());
         return accountRepo.save(accountEntity);
     }
 }

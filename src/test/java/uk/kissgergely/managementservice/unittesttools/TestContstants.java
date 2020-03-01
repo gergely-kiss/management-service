@@ -1,31 +1,25 @@
 package uk.kissgergely.managementservice.unittesttools;
 
-public class TestContstants {
-	private TestContstants() {
-	}
+import uk.kissgergely.managementservice.data.entities.TagEntity;
 
-	public static final int TEST_ID_1 = 1;
-	public static final int TEST_ID_2 = 2;
-	public static final String TEST_NAME_1 = "test name one";
-	public static final String TEST_NAME_2 = "test name two";
-	public static final String TEST_DESCRIPTION_1 = "test description one";
-	public static final String TEST_DESCRIPTION_2 = "test description two";
-	public static final String TEST_HOST_REFERENCE_1 = "test-H0STR3F-h0str3f-one";
-	public static final String TEST_HOST_REFERENCE_2 = "test-H0STR3F-h0str3f-two";
-	public static final String TEST_NAME_ALREADY_EXIST = "test name already exist";
-	public static final String TEST_NAME_FOR_DELETE = "test name for delete";
-	public static final String TEST_NAME_NOT_FOUND = "test name not found";
+import java.util.HashSet;
+import java.util.Set;
+
+public class TestContstants {
+
+
+	public static final Integer TEST_ID = 1;
+	public static final String TEST_NAME = "test name";
+	public static final String TEST_DESCRIPTION = "test description";
+	public static final Double TEST_BALANCE = 10D;
+	public static final Set<TagEntity> TEST_TAG_SET = new HashSet();
 
 	public static final String ID = "id";
 	public static final String NAME = "name";
 	public static final String DESCRIPTION = "description";
-	public static final String HOST_REFERENCE = "hostReference";
-	public static final String TEST_DELETED = "deleted";
-	public static final String ACCOUNT_NAME = "accountName";
+	public static final String BALANCE = "balance";
 	public static final String DELETED = "deleted";
 
-	public static final String NAME_ALREADY_EXIST = "name already exist";
-	public static final String NAME_FOR_DELETE = "name for delete";
-	public static final String NAME_NOT_FOUND = "name not found";
-	public static final String ACCOUNT_HOSTREF_NOT_FOUND = "4cc0unt-h0str3f-NOT_FOUND";
+	private TestContstants() {
+	}
 }

@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @SpringBootTest
 class AccountControllerTest {
-
+/*
 	private MockMvc mockMvc;
 
 	@InjectMocks
@@ -69,7 +69,7 @@ class AccountControllerTest {
 				.andExpect(content().string(TestUntils.asJsonString(accountResponseList)));
 	}
 
-/*	@Test
+	@Test
 	void getAllException() throws Exception {
 		when(accountControllerService.getAllAccounts()).thenThrow(
 				new AccountNotFoundControllerException(HttpStatus.NOT_FOUND, ControllerResponseConstants.NO_ACCOUNT_FOUND));

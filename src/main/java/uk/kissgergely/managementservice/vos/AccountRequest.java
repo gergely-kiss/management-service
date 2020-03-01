@@ -15,6 +15,7 @@ public class AccountRequest {
 		this.accountName = accountName;
 		this.accountDescription = accountDescription;
 	}
+
 	public String getAccountName() {
 		return accountName;
 	}

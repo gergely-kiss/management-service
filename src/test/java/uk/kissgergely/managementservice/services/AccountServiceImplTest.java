@@ -23,7 +23,7 @@ import uk.kissgergely.managementservice.services.resources.ServiceConstants;
 import uk.kissgergely.managementservice.unittesttools.TestContstants;
 
 class AccountServiceImplTest {
-
+/*
 	AccountService accountService;
 
 	@Mock
@@ -136,4 +136,6 @@ class AccountServiceImplTest {
 		});
 		assertTrue(exception.getMessage().contains(ServiceExceptionConstants.ACCOUNT_NOT_FOUND));
 	}
+
+ */
 }

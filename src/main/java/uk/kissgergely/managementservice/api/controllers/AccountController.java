@@ -3,8 +3,6 @@ package uk.kissgergely.managementservice.api.controllers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,9 +33,6 @@ import uk.kissgergely.managementservice.vos.AccountResponse;
 @RestController
 @RequestMapping(ControllerConstants.API_ROOT + ControllerConstants.ACCOUNT_PATH)
 public class AccountController {
-
-    private static final Logger LOG = LoggerFactory.getLogger(AccountController.class);
-
     AccountService accountService;
 
     @Autowired
@@ -55,7 +50,7 @@ public class AccountController {
     @GetMapping(ControllerConstants.SLASH_ID)
     @ApiResponses(value = {@ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND)})
     public ResponseEntity<AccountResponse> getAccount(
-            @ApiParam(value = "Id for the account", required = true) @PathVariable String id)
+            @ApiParam(value = "Id for the account", required = true) @PathVariable Integer id)
             throws ResponseStatusException {
         try {
             return new ResponseEntity<>(AccountDTO.transferEntityToResponse(accountService.getAccount(id)), HttpStatus.OK);
@@ -65,7 +60,7 @@ public class AccountController {
         }
     }
 
-    @PostMapping(ControllerConstants.SLASH_ID)
+    @PostMapping()
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @ApiResponses(value = {@ApiResponse(code = 201, message = ControllerResponseConstants.CREATED),
             @ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST)})
@@ -89,7 +84,7 @@ public class AccountController {
             @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND),
             @ApiResponse(code = 409, message = ControllerResponseConstants.ACCOUNT_ALREADY_EXIST)})
     public ResponseEntity<AccountResponse> updateAccount(
-            @ApiParam(value = "Id for the account", required = true) @PathVariable String id,
+            @ApiParam(value = "Id for the account", required = true) @PathVariable Integer id,
             @RequestBody AccountRequest accountRequest)
             throws Exception {
         try {
@@ -111,11 +106,10 @@ public class AccountController {
     @ApiResponses(value = {
             @ApiResponse(code = 204, message = ControllerResponseConstants.RESOURCE_DELETED_SUCCESSFULLY),
             @ApiResponse(code = 404, message = ControllerResponseConstants.ACCOUNT_NOT_FOUND)})
-    public ResponseEntity<String> deletAccount(
+    public ResponseEntity<String> deleteAccount(
 
-            @ApiParam(value = "Id for the account", required = true) @PathVariable String id)
+            @ApiParam(value = "Id for the account", required = true) @PathVariable Integer id)
             throws ResponseStatusException {
-        LOG.info("{}", id);
         try {
             accountService.deleteAccount(id);
             return new ResponseEntity<>(ServiceExceptionConstants.ACCOUNT_NOT_FOUND_BY_ID, HttpStatus.OK);
