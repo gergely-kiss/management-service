@@ -9,8 +9,8 @@ public class ReflectionTool {
 		try {
 			Method m = c.getDeclaredMethod(methodName);
 			return (T) m.getAnnotation(annotation);
-		} catch (NoSuchMethodException nsme) {
-			throw new RuntimeException(nsme);
+		} catch (NoSuchMethodException ex) {
+			throw new RuntimeException(ex);
 		}
 	}
 
@@ -18,8 +18,8 @@ public class ReflectionTool {
 		try {
 			Field f = c.getDeclaredField(fieldName);
 			return (T) f.getAnnotation(annotation);
-		} catch (NoSuchFieldException nsme) {
-			throw new RuntimeException(nsme);
+		} catch (NoSuchFieldException ex) {
+			throw new RuntimeException(ex);
 		}
 	}
 

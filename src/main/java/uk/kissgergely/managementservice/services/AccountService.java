@@ -1,7 +1,6 @@
 package uk.kissgergely.managementservice.services;
 
 import java.util.List;
-
 import uk.kissgergely.managementservice.data.entities.AccountEntity;
 import uk.kissgergely.managementservice.services.exceptions.AccountAlreadyExistException;
 import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundException;
@@ -9,32 +8,40 @@ import uk.kissgergely.managementservice.services.exceptions.AccountNotFoundExcep
 public interface AccountService {
 
 	/**
-	 * @return All accounts
+	 * @return
 	 */
 	List<AccountEntity> getAllAccounts();
 
 	/**
 	 * @param id
-	 * @return Account entity
+	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	AccountEntity getAccount(String hostReference) throws AccountNotFoundException;
+	AccountEntity getAccount(Integer id)
+			throws AccountNotFoundException;
 
 	/**
 	 * @param accountEntity
-	 * @return Updated or saved account entity
-	 * @throws AccountNotFoundException
+	 * @return
+	 * @throws Exception
+	 */
+	AccountEntity updateAccount(AccountEntity accountEntity)
+			throws AccountNotFoundException, AccountAlreadyExistException ;
+
+	/**
+	 * @param accountEntity
+	 * @return
 	 * @throws AccountAlreadyExistException
 	 */
-	AccountEntity updateAccount(AccountEntity accountEntity) throws AccountNotFoundException, AccountAlreadyExistException;
+	AccountEntity saveAccount(AccountEntity accountEntity)
+			throws AccountAlreadyExistException;
 
-	AccountEntity saveAccount(AccountEntity accountEntity) throws AccountAlreadyExistException;
-	
 	/**
-	 * @param accountEntity
-	 * @return deleted account
+	 * @param id
+	 * @return
 	 * @throws AccountNotFoundException
 	 */
-	String deleteAccount(String hostReference) throws AccountNotFoundException;
+	AccountEntity deleteAccount(Integer id)
+			throws AccountNotFoundException;
 
 }

@@ -1,105 +1,102 @@
 package uk.kissgergely.managementservice.data.entities;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import org.junit.jupiter.api.Test;
 import uk.kissgergely.managementservice.unittesttools.AssertAnnotations;
 import uk.kissgergely.managementservice.unittesttools.ReflectionTool;
 import uk.kissgergely.managementservice.unittesttools.TestContstants;
 
+import javax.persistence.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class AccountEntityTest {
 
     @Test
     void typeAnnotations() {
-	AssertAnnotations.assertType(AccountEntity.class, Entity.class, Table.class);
+        AssertAnnotations.assertType(AccountEntity.class, Entity.class, Table.class);
     }
 
     @Test
     public void fieldAnnotations() {
-	AssertAnnotations.assertField(AccountEntity.class, TestContstants.ID, Id.class, GeneratedValue.class,
-		Column.class);
-	AssertAnnotations.assertField(AccountEntity.class, TestContstants.NAME, Column.class);
-	AssertAnnotations.assertField(AccountEntity.class, TestContstants.DESCRIPTION, Column.class);
-	AssertAnnotations.assertField(AccountEntity.class, TestContstants.HOST_REFERENCE, Column.class);
-	AssertAnnotations.assertField(AccountEntity.class, TestContstants.TEST_DELETED, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.ID, Id.class, GeneratedValue.class,
+                Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.NAME, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.DESCRIPTION, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.DELETED, Column.class);
+        AssertAnnotations.assertField(AccountEntity.class, JpaConstants.BALANCE, Column.class);
     }
 
     @Test
     public void entity() {
-	Entity accountEntity = ReflectionTool.getClassAnnotation(AccountEntity.class, Entity.class);
-	assertEquals("", accountEntity.name());
+        Entity accountEntity = ReflectionTool.getClassAnnotation(AccountEntity.class, Entity.class);
+        assertEquals("", accountEntity.name());
     }
 
     @Test
     public void table() {
-	Table table = ReflectionTool.getClassAnnotation(AccountEntity.class, Table.class);
-	assertEquals(JpaConstants.ACCOUNT, table.name());
+        Table table = ReflectionTool.getClassAnnotation(AccountEntity.class, Table.class);
+        assertEquals(JpaConstants.ACCOUNT, table.name());
     }
 
     @Test
-    public void contructorGetSet() {
-	AccountEntity accountEntity = new AccountEntity();
-	assertEquals(accountEntity.getDeleted(), false);
+    public void constructor() {
+        AccountEntity accountEntity = new AccountEntity();
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
 
-	accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1);
-	assertEquals(TestContstants.TEST_NAME_1, accountEntity.getName());
-	assertEquals(TestContstants.TEST_DESCRIPTION_1, accountEntity.getDescription());
-	assertEquals(accountEntity.getDeleted(), false);
+        accountEntity = new AccountEntity(TestContstants.TEST_NAME, TestContstants.TEST_DESCRIPTION);
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
 
-	accountEntity = new AccountEntity(TestContstants.TEST_NAME_1, TestContstants.TEST_DESCRIPTION_1,
-		TestContstants.TEST_HOST_REFERENCE_1);
-	assertEquals(TestContstants.TEST_NAME_1, accountEntity.getName());
-	assertEquals(TestContstants.TEST_DESCRIPTION_1, accountEntity.getDescription());
-	assertEquals(TestContstants.TEST_HOST_REFERENCE_1, accountEntity.getHostReference());
-	assertEquals(false, accountEntity.getDeleted());
+        accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME, TestContstants.TEST_DESCRIPTION);
+        assertEquals(TestContstants.TEST_ID, accountEntity.getId());
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        assertEquals(JpaConstants.BALANCE_DEFAULT, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
 
-	accountEntity = new AccountEntity(TestContstants.TEST_ID_1, TestContstants.TEST_NAME_1,
-		TestContstants.TEST_DESCRIPTION_1, TestContstants.TEST_HOST_REFERENCE_1);
-	assertEquals(TestContstants.TEST_ID_1, accountEntity.getId());
-	assertEquals(TestContstants.TEST_NAME_1, accountEntity.getName());
-	assertEquals(TestContstants.TEST_DESCRIPTION_1, accountEntity.getDescription());
-	assertEquals(TestContstants.TEST_HOST_REFERENCE_1, accountEntity.getHostReference());
-	assertEquals(false, accountEntity.getDeleted());
-	
-	accountEntity.setId(TestContstants.TEST_ID_2);
-	accountEntity.setName(TestContstants.TEST_NAME_2);
-	accountEntity.setDescription(TestContstants.TEST_DESCRIPTION_2);
-	accountEntity.setHostReference(TestContstants.TEST_HOST_REFERENCE_2);
-	accountEntity.setDeleted(true);
-	
-	assertEquals(TestContstants.TEST_ID_2,accountEntity.getId() );
-	assertEquals(TestContstants.TEST_NAME_2, accountEntity.getName());
-	assertEquals(TestContstants.TEST_DESCRIPTION_2, accountEntity.getDescription());
-	assertEquals(TestContstants.TEST_HOST_REFERENCE_2, accountEntity.getHostReference());
-	assertEquals(true, accountEntity.getDeleted());
-	
+        accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME,
+                TestContstants.TEST_DESCRIPTION, TestContstants.TEST_BALANCE);
+        assertEquals(TestContstants.TEST_ID, accountEntity.getId());
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
+
+        accountEntity = new AccountEntity(TestContstants.TEST_ID, TestContstants.TEST_NAME,
+                TestContstants.TEST_DESCRIPTION, TestContstants.TEST_BALANCE, TestContstants.TEST_TAG_SET);
+
+        assertEquals(TestContstants.TEST_ID, accountEntity.getId());
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
+        assertEquals(TestContstants.TEST_TAG_SET, accountEntity.getTagEntitySet());
+        assertEquals(JpaConstants.DELETED_DEFAULT, accountEntity.getDeleted());
     }
+
+    @Test
+    public void settersAndGetters(){
+        AccountEntity accountEntity = new AccountEntity();
+
+        accountEntity.setId(TestContstants.TEST_ID);
+        assertEquals(TestContstants.TEST_ID, accountEntity.getId());
+        accountEntity.setName(TestContstants.TEST_NAME);
+        assertEquals(TestContstants.TEST_NAME, accountEntity.getName());
+        accountEntity.setDescription(TestContstants.TEST_DESCRIPTION);
+        assertEquals(TestContstants.TEST_DESCRIPTION, accountEntity.getDescription());
+        accountEntity.setBalance(TestContstants.TEST_BALANCE);
+        assertEquals(TestContstants.TEST_BALANCE, accountEntity.getBalance());
+        accountEntity.setDeleted(TestContstants.TEST_DELETED);
+        assertEquals(TestContstants.TEST_DELETED, accountEntity.getDeleted());
+        accountEntity.setTagEntitySet(TestContstants.TEST_TAG_SET);
+        assertEquals(TestContstants.TEST_TAG_SET, accountEntity.getTagEntitySet());
+    }
+
     @Test
     public void toStringTest() {
-	AccountEntity accountEntity = new AccountEntity(TestContstants.TEST_ID_1, TestContstants.TEST_NAME_1,
-		TestContstants.TEST_DESCRIPTION_1, TestContstants.TEST_HOST_REFERENCE_1);
-	
-	StringBuilder builder = new StringBuilder();
-	builder.append("AccountEntity ["+TestContstants.ID+"=");
-	builder.append(TestContstants.TEST_ID_1);
-	builder.append(", "+TestContstants.NAME+"=");
-	builder.append(TestContstants.TEST_NAME_1);
-	builder.append(", "+TestContstants.DESCRIPTION+"=");
-	builder.append(TestContstants.TEST_DESCRIPTION_1);
-	builder.append(", "+TestContstants.HOST_REFERENCE+"=");
-	builder.append(TestContstants.TEST_HOST_REFERENCE_1);
-	builder.append(", " +TestContstants.TEST_DELETED+"=");
-	builder.append(false);
-	builder.append("]");
-	
-	String toString = new String(builder);
-	
-	assertEquals(toString, accountEntity.toString());
     }
+
+
 }

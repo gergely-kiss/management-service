@@ -10,12 +10,16 @@ public class AccountDTO {
 	}
 
 	public static AccountResponse transferEntityToResponse(AccountEntity accountEntity) {
-		return new AccountResponse(accountEntity.getHostReference(), accountEntity.getName(),
+		return new AccountResponse(accountEntity.getId(), accountEntity.getName(),
 				accountEntity.getDescription());
 	}
 
 	public static AccountEntity transferRequestToEntity(AccountRequest accountRequest) {
 		return new AccountEntity(accountRequest.getAccountName(), accountRequest.getAccountDescription());
+	}
+	
+	public static AccountEntity transferRequestToEntity(Integer id, AccountRequest accountRequest) {
+		return new AccountEntity(id, accountRequest.getAccountName(), accountRequest.getAccountDescription());
 	}
 
 }

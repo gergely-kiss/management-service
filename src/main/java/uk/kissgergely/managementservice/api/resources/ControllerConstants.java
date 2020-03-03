@@ -6,6 +6,8 @@ public class ControllerConstants {
 	public static final String API_ROOT="/api";
 	public static final String REGEX_ALL = ".*";
 	public static final String ACCOUNT_PATH="/account";
+	public static final String BALANCE_PATH="/balance";
+	public static final String TAG_PATH="/tag";
 	public static final String SLASH_ID="/{id}";
 
 	public static final String MANAGEMENT_SERVICE_TITLE="management-service";

@@ -11,9 +11,9 @@
 	</parent>
 	<groupId>uk.kissgergely</groupId>
 	<artifactId>management-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>management-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>self management service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
